@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8dp"
+
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/catogory_photo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#ffffff"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logoo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/catogory_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/catogory_photo"
+        android:background="@drawable/button_boarder"
+        android:padding="@dimen/margin_8dp"
+        android:text="part1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/margin_8dp"
+        android:id="@+id/cardView"
+
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="10dp"
+                android:elevation="8dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0.0px"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                card_view:cardPreventCornerOverlap="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="@dimen/activity_vertical_margin_medium">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="#ffffff"
+                        android:src="@drawable/logoo"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/catogory_photo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                       />
+
+
+
+
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/catogory_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="part1"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:padding="@dimen/margin_8dp"
+            android:background="@drawable/button_boarder"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>-->

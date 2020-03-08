@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Activity.AddResturantActivity">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/addoffice"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/CHOOSECITY"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/cityname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:entries="@array/city"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:padding="8dp"
+            android:text="@string/city"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/officetypear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_editstyle"
+            android:hint="@string/officetype"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:inputType="textPersonName"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/officetypeen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/add_editstyle"
+            android:hint="@string/officetypeen"
+            android:inputType="textPersonName"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/officearname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/add_editstyle"
+            android:hint="@string/officearname"
+            android:inputType="textPersonName"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/officeenname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/add_editstyle"
+            android:hint="@string/officeenname"
+            android:inputType="textPersonName"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/officenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/add_editstyle"
+            android:hint="@string/officenumber"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:inputType="number"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/addoffice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/addstyle"
+            android:text="@string/ADD"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

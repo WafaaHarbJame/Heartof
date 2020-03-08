@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl"
+    android:background="@color/white"
+
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="0dp"
+        android:id="@+id/logo"
+        android:layout_marginEnd="0dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+
+        android:src="@drawable/logoo" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/welcom"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:fontFamily="@font/the_sans_plain"
+        android:textStyle="bold"
+        android:background="@color/white"
+        android:textColor="@color/green"
+        android:layout_below="@id/logo"
+        android:contentDescription="@string/app_name" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/green"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        app:indicatorName="BallPulseIndicator" />
+
+</RelativeLayout>
+

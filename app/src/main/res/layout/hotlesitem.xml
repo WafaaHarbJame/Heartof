@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="4dp"
+    android:padding="8dp"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
+    android:id="@+id/container"
+
+    android:background="@drawable/whoiteboarder"
+    android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:id="@+id/tv_hotle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اسم الفندق"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userimage"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_hotle_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/container"
+        android:text="الوصف"
+        app:layout_constraintStart_toStartOf="@id/tv_hotle_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_hotle_name" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" السعر"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:id="@+id/userimage"
+        android:src="@drawable/damaa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:civ_border_color="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/price"
+        >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

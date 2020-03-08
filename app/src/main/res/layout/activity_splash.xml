@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl"
+    android:background="@color/white"
+
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logoo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="41dp"
+        android:background="@color/white"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/the_sans_plain"
+        android:gravity="center"
+        android:text="@string/welcom"
+        android:textColor="@color/green"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        app:indicatorColor="@color/green"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        app:indicatorName="BallPulseIndicator" />
+
+</RelativeLayout>
+

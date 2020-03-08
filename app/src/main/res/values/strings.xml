@@ -1,0 +1,197 @@
+<resources>
+    <string name="app_name">Heart of the world</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+
+    <string name="menu_send">Send</string>
+    <string name="welcom">Welcom</string>
+    <string name="action_settings">Profile </string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Pictures</string>
+    <string name="menu_slideshow">حفلات عامة</string>
+    <string name="menu_tools">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_about">About app </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="married_party">حفلات زواج</string>
+    <string name="singl_party">حفلات توديع عزوبية</string>
+    <string name="grad_party">حفلات تخرج</string>
+    <string name="birthday_party">حفلات عيد ميلاد</string>
+    <string name="about">
+        هل لديك حفله ، مناسبه ، زواج    بأمكانك طلب أي خدمة من خلال تطبيق مناسبات حيث خصص هذا التطبيق  لفهم حاجة عملائنا وما يناسبهم ، مهما كانت طريقة ونمط حياتهم  حيث نفكر معك بأدق التفاصيل من تصميم الحفل والاستقبال والزهور والضيافة والدعوات والتصوير والإضاءة لذلك يمكن الطلب من خلال التطبيق بكل سهولة
+    </string>
+    <string name="signIn">Sign in</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">password</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="login">login</string>
+    <string name="dontHaveAccount">Dont Have Account ?</string>
+    <string name="signFromHere">Register from here</string>
+    <string name="signUp">Sign Up</string>
+    <string name="nameHint">Name</string>
+    <string name="confirmPasswordHint">Confirm Password</string>
+    <string name="phoneNumber">phoneNumber</string>
+    <string name="sign">sign Up</string>
+    <string name="haveAccount">Do you have account?</string>
+    <string name="clickHere">Click Here</string>
+    <string name="quickstart_message">Click the SUBSCRIBE TO WEATHER button below to subscribe to the
+        weather topic. Messages sent to the weather topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="subscribe_to_weather">Subscribe To Weather</string>
+    <string name="log_token">Log Token</string>
+
+    <string name="msg_subscribed">Subscribed to weather topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+    <string name="fcm_message">FCM Message</string>
+    <string name="fullNameRequired">Full Name Required !</string>
+    <string name="emailRequired">Email Required !</string>
+    <string name="passwordRequired">password Required !</string>
+    <string name="confirmPasswordRequired">confirm Password Required !</string>
+    <string name="confirmPasswordNotMatchesPassword">confirm Password Not Matches Password !</string>
+    <string name="phoneRequired">phone Number Required !</string>
+    <string name="load_login">Please wait to check data</string>
+    <string name="enter__correct_email">Email not correct</string>
+    <string name="exist">logout</string>
+    <string name="back">Restore Password</string>
+    <string name="myRE" />
+    <string name="myREQ">طلباتي</string>
+    <string name="loginasvistor">Login As Vistor</string>
+    <string name="menu_setting">Setting</string>
+    <string name="communicate">Communicate</string>
+    <string name="Restaurants">Restaurants</string>
+    <string name="hotels">Hotels</string>
+    <string name="climate">Climate</string>
+    <string name="Tourist">Tourist offices</string>
+    <string name="milestones">Milestones</string>
+    <string name="information">Information</string>
+    <string name="numberimportant">Important Numbers</string>
+    <string name="caroffices">Car OFFICES</string>
+    <string name="Chooselang">choose language</string>
+    <string name="save">Save</string>
+    <string name="arabiclang">Arabic</string>
+    <string name="englishlang">English</string>
+    <string name="myAccount">My Account</string>
+    <string name="language">language</string>
+    <string name="home">Home</string>
+    <string name="Laws">Laws and Etiquette</string>
+    <string name="AlHasa">Al-Hasa</string>
+    <string name="AlBaha">Al-Baha</string>
+    <string name="Abha">Abha</string>
+    <string name="Jazan">Jazan</string>
+    <string name="Makkah">Makkah</string>
+    <string name="Medina">Medina</string>
+    <string name="Dammam">Dammam</string>
+    <string name="AlKhober">Al Khober</string>
+    <string name="Riyadh">Riyadh</string>
+    <string name="Hail">Hail</string>
+    <string name="Jeddah">Jeddah</string>
+    <string name="Tabuk">Tabuk</string>
+    <string name="advices">Travel advice </string>
+    <string name="city">city</string>
+
+    <string-array name="city">
+        <item>AlHasa</item>
+        <item>AlBaha</item>
+        <item>Abha</item>
+        <item>Jazan</item>
+        <item>Makkah</item>
+        <item>Medina</item>
+        <item>Dammam</item>
+        <item>AlKhober</item>
+        <item>Riyadh</item>
+        <item>Hail</item>
+        <item>Jeddah</item>
+        <item>Tabuk</item>
+
+    </string-array>
+    <string name="climatetext">The Kingdom has a different climate in all parts of the country as the country owns a large area of land, and many geological stages have passed through itover the centuries and centuries. The Kingdom also contains many different terrain, mountain heights,valleys, dunes, plateaus and plains, Saudi Arabia has four distinct seasons and a climate that varies between regions.\n 1- Spring Spring in Saudi Arabia can be brisk, particularly in the north, where the temperature at night can drop to below 15 degrees. The central and southern regions are warmer, averaging around 20 degrees after nightfall. Rainfall is at its highest now, particularly in the central region and in the southwest over the Asir Mountains. \n 2-Summer Summer signals the start of rising temperatures across much of the country, with the exception of the comparatively mild highlands in the southwest. The early mornings and long evenings are more temperate with gentle winds, so take advantage of the warm seas to explore Saudi Arabia’s world-class dive sites, or try your hand at other watersports. \n 3- Autumn Autumn brings gentler weather and cool breezes in both Saudi Arabia’s northern regions and the southwestern highlands. While daytime temperatures remain warm, evenings are mild and perfect for outdoor strolling along Jeddah’s waterfront, indulging in al-fresco dining, or visiting Al Ahsa’s cool desert springs.\n 4-Winter Take advantage of Saudi Arabia’s beautiful winter weather to explore the Kingdom. The balmy days and cool nights are perfect for camping, rock climbing, or just exploring Saudi Arabia’s bustling cities and verdant highlands. You might even be lucky enough to see snowfall in the mountains of the northern regions, blanketing the slopes and desert sands. "</string>
+    <string name="informationtext">" Here is a collection of general information about the Kingdom of Saudi Arabia:1-The capital: Riyadh \n 2-The main cities: Jeddah, Makkah Al Mukarramah, Al Madinah Al Munawwarah, Dammam  \n3-The official religion: Islam \n 4-Official language: Arabic, English (commercial) \n 5-Currency: Saudi Riyal \n 6-National Day: September 23   \n 7-Climate: In general, hot dry in summer, cool dry in winter,and the southern regions are characterized by low temperatures  \n 8-The most important exports:oil and petroleum products 90% "</string>
+    <string name="numbertext">"Figures of interest to you in the Kingdom of Saudi Arabia We present to you in this article a brochure of the most important numbers that mayinterest you in Saudi Arabia and that will facilitate many of the things we offer you in the services section within your distinguished site How much:  Numbers that may interest you in Saudi Arabia:  \n 1- Security numbers  Police: 999  Accidents (traffic): 993  Ambulance: 997  Amortization: 998  Drug control: 995  Road Security: 996  General Intelligence: 985  2- Problems or inquiries in the telephone services  Inquiries: 905  Malfunctions: 904  International calls: 900  Talking time: 961  Mobile phone: 902  Other queries  Meteorology: 966  Aviation and transportation  Central reservation: 4884444  Airport Information: 2221700  Train traffic: 4489678  Mass transportation: 8001249999 "</string>
+    <string name="lawtext">"Public etiquette in Saudi Arabia is informed by our cultural heritage and Islamic religion, and underpinned by values that are familiar to people everywhere: respect for others, decorum in public and protection of privacy.  Public displays of affection are not consistent with local culture and visitors should also avoid using profane language or gestures.  Religion At prayer time, five times a day, music is turned off in public places and many shops close briefly.  For one month a year, during Ramadan, Muslims fast from dawn to dusk and so it is respectful to avoid eating or drinking in public during the day at this time.  Alcohol and Substances The sale, purchase and consumption of alcohol are illegal in Saudi Arabia. It is illegal to bring alcohol or drugs into the country. "</string>
+    <string name="advicestext">1- Be flexible: Try to be flexible and patient when meeting any bad or unsatisfactory situations and accept the matter and reduce as much as possible the severity of the discomfort, because patience is necessary and required in travel and tourism. \n  2- Taking copies of important travel documents and documents: Always carry a copy of your passport with you in the bag in anticipation of any bad situation that you may be exposed to in case of losing the passport because of it. You can cancel your trip, lose your money or be exposed to any situation that exposes you to legal accountability.\n  3- Prepare your bag with the appropriate clothes: The summer months in Saudi Arabia are hot, so you prefer a light material for clothes, such as light cotton.  According to custom in the country, women wear a comfortable long cloak.  If this is your first time in Saudi Arabia, you can wear a long jacket with pants or a long skirt. Men are advised not to wear shorts above the knee, in public places.  In general, pay attention to any inappropriate photos or messages on your clothes. \n  4- Price Negotiation: Most places in Saudi Arabia have specific and non-negotiable prices, and there are some places that accept negotiations, especially in the historic Al-Balad and Jeddah areas.  In some locations there you will find local shop owners happy to give you reasonable and satisfactory prices. \n 5- Take pictures: The people of Saudi Arabia are fully aware of the season and its activities, and they are excited and happy to be among them.  So bring the camera and tour the sites and take pictures that suit you, but be careful, as some families and women do not prefer to be photographed without their knowledge or prior permission from them, and we advise you to ask them before you do this to be safe as is the case in all countries of the world  . \n 6- Take care of yourself in the heat: We do not advise you to walk outside for a long time during the middle of the day.  And in case you are going to roam for more than ten minutes, we advise you to cover your head and drink a lot of fluids.  We also advise you to apply sunscreen paint that you can buy at your local pharmacy. \n 7- Prayer and shopping times: Please bear in mind that shops, supermarkets, and sellers close their stores for about half an hour to perform the prayer.  So, organize your time before going to the market, taking into account prayer times. \n  8- Second language: English is the second language and most people in Saudi Arabia speak it, especially with non-Arabic speakers, so don\'t be shy to speak it.\n  9- Requesting help: Do not hesitate to ask for help from the organizers posted at the event sites or from the information kiosks regarding any inquiries you have related to the sites or events.  Also, Jeddah residents will not hesitate to help you in this regard, so do not hesitate to ask them. \n  10- Safety and Security: The Kingdom of Saudi Arabia is a safe country, and centuries ago it welcomed caravans of pilgrims and pilgrims.  Saudi Arabia is generally considered safe, but don\'t underestimate preserving your personal effects.  Also, Saudi Arabia is better equipped to travel by car than on foot, so it is advised to slow down before crossing the road and use the car to explore the city in an optimal way.</string>
+    <string name="yes">yes</string>
+    <string name="logintxt">Wait To login </string>
+    <string name="logout">logout</string>
+    <string name="signUptext">يتم الان التحقق من البيانات</string>
+    <string name="desc">description</string>
+    <string name="addresturant">Add Restaurant</string>
+    <string name="addhotle">Add Hotel</string>
+    <string name="addmilestone">Add Milestone</string>
+    <string name="addsoqaa">Add Soqaa</string>
+    <string name="adding_data_for_aplication">Adding Data for Application</string>
+    <string name="CHOOSECITY">Choose City</string>
+    <string name="ADD">Add</string>
+    <string name="addingsucess">adding Success</string>
+    <string name="hotle_ar_name">Hotel Arabic name</string>
+    <string name="hotle_en_name">Hotel English name</string>
+    <string name="hotle_en_desc">Hotel English description</string>
+    <string name="hotle_link">Hotel link Location</string>
+    <string name="hotle_price">Hotel price for night</string>
+    <string name="hotle_image">Hotel Link image</string>
+    <string name="milestonse_image">Milestone Link Image</string>
+    <string name="milestonse_en_desc">Milestone English description</string>
+    <string name="milestonse_ar_desc">Milestone Arabic description</string>
+    <string name="resturants_en_address">Restaurant english  Address</string>
+    <string name="resturants_ar_address">Restaurant Arabic address</string>
+    <string name="resturants_phone">Restaurant phone</string>
+    <string name="resturants_link">Restaurant link Location</string>
+    <string name="resturants_en_desc">Restaurant english  description</string>
+    <string name="resturants_en_name">Restaurant English name</string>
+    <string name="resturants_ar_name">Restaurant Arabic name</string>
+    <string name="soaq_ar_name">soaq Arabic name</string>
+    <string name="soaq_en_name">soaq English name</string>
+    <string name="resturants_ar_desc">Restaurant Arabic description</string>
+    <string name="soaq_en_desc">soaq English description</string>
+    <string name="soaq_image">soaq Link image</string>
+    <string name="officenumber">Office Phone Number</string>
+    <string name="officeenname">Office English name</string>
+    <string name="officearname">Office Arabic name</string>
+    <string name="officetypeen">Office English type</string>
+    <string name="officetype">Office Arabic  Type</string>
+    <string name="soaq__ar_desc">Soaq English description</string>
+    <string name="addoffice">Add Office</string>
+    <string name="hotle_ar_desc">Hotle Arabic description</string>
+    <string name="ALASQA">Markets</string>
+    <string name="aboutcity">About City</string>
+    <string name="Abhaabout">The city of Abha is the administrative headquarters and the capital of the Asir region in the southwest of the Kingdom of Saudi Arabia and its most important cities, as it contains the headquarters of the emirate and the branches of ministries. It is located on the Hijaz Mountains, and it is bordered by the east and northeast by Khamis Mushayt Governorate, to the northwest by Al Namas Governorate, and to the west and southwest by Muhayil Asir Governorate and Rijal Alama. The city of Abha is considered one of the most important resorts and tourist cities in the Kingdom of Saudi Arabia, because of its mild climate and great height above the surface of the sea, it is also called the bride of the mountain as it is called the Lady of Fog as well as the splendid Abha because of its natural beauty.
+
+</string>
+    <string name="Makkahabout">is a holy city for Muslims, with the Grand Mosque, and the Kaaba, which is the Mecca of Muslims in their prayers.  It is located in the west of the Kingdom of Saudi Arabia, about 400 km from Medina in the southwestern direction, and from the city of Taif about 120 km in the eastern direction, and 72 km from the city of Jeddah and the Red Sea coast, and the closest port to it is Jeddah Islamic Port, and the closest international airport  Its is King Abdulaziz
+International Airport.
+</string>
+    <string name="Medinaabout">is the first capital in the history of Islam, and the second most sacred place for Muslims after Mecca.  It is the capital of Al-Madinah Al-Munawwarah region located on the historical land of Al-Hijaz, west of the state of Saudi Arabia (currently), Al-Madinah Al-Munawarah is about 400 km from Makkah Al-Mukarramah in the northeast direction, and about 150 km east of the Red Sea, and the nearest port to it is the port of Yanbu which is located in The south-western side of it is 220 km away, Madinah area is about 589
+km2.
+
+
+
+
+</string>
+    <string name="AlKhoberabout"> It is located in the east of the Kingdom specifically south of Dammam, and the news flourished after the discovery of oil, especially since the eastern region is the most important and important region in the production of oil in the Kingdom of Saudi Arabia, therefore it is famous for trade and industry.</string>
+    <string name="Riyadhabout">  It is the capital of the Kingdom of Saudi Arabia, its largest city and the third largest Arab capital by population.
+ Riyadh is located in the middle of the Arabian Peninsula on the Najd plateau. The city of Riyadh is inhabited by nearly 6 million people and the Saudi capital is considered one of the fastest expanding cities in the world.
+
+</string>
+    <string name="Jeddahabout">It is one of the governorates of Makkah Al-Mukarramah Region and it is located in the west of the Kingdom of Saudi Arabia on the Red Sea coast. The governorate is 949 km from the capital Riyadh, 79 km from Makkah Al-Mukarramah, and 420 km away from Medina. It is the economic and tourist capital of the Kingdom of Saudi Arabia, and is considered the first destination in the Kingdom for tourists and is the second largest city in the Kingdom of Saudi Arabia after the capital Riyadh and the largest city in the Makkah region  Al-Mukarramah, and the Gateway to the Two Holy Mosques [8], has the largest sea port on the Red Sea, and is considered a center of finance and business in the Kingdom of Saudi Arabia and a major port for the export of non-oil goods and for importing local needs, and there are approximately 135 skyscrapers in construction in Jeddah.  There are also headquarters for international banks.</string>
+    <string name="Hailabout"> It is located in the north of Najd from the central regions, and is the seat of the Emirate of Hail. and it is the administrative and regional capital for the reigon. Hail is famous for the famous mountains of Jabal Salma and Jabal Aga. The city of Hail is located in the area of Jabal Aga, west of Wadi Al-Adraa, in the heart of which lies the well of Samah, famous for its abundance and freshness of its waters.</string>
+    <string name="Tabukabout">The seat of the Emirate of Tabuk is the largest city in northern Saudi Arabia, and around it are some of the most important monuments in the Arabian Peninsula. The Tabuk region is the northern gateway to the Arabian Peninsula, and a vital path for trade, pilgrims and pilgrims from outside the Arabian Peninsula.  It is one of the important agricultural regions in the Kingdom.</string>
+    <string name="AlBahaabout">The city of Al-Baha is the capital of the Al-Baha region and the seat of the emirate, and it is one of the most important cities for tourism and agricultural purposes, and to which the region is attributed and the administrative and commercial weight is concentrated. There are governmental departments and major commercial centers, in addition to that it has popular markets, the most important of them: Thursday market. The population of Al-Baha is approximately 411,888. The city is surrounded by many forests, including: Raghdan Forest, Al-Shahba Forest, Dar Al-Jabal, and Zarqa, which Sharif Hussein visited and called it: Garden of the Hijaz and the lowland of Makkah. It is bounded on the north by the governorate of villages, on the west by the Al Mandak governorate, on the south by the Baljurashi Governorate, and on the east by the Al Aqeeq Governorate.</string>
+    <string name="DamaaAbout">"  Dammam is located in the eastern region, and is the largest city in the eastern region. It is located on three sides of the Arab Gulf; northern, eastern, and southern. It is distinguished as a commercial and residential center. It includes the administrative bodies of the region and government departments. "</string>
+    <string name="Jazanabout">"  Jizan is the administrative capital of the southwestern region of the Kingdom of Saudi Arabia. It has Jazan Port as well as the regional airport."</string>
+    <string name="AlHasaabout">Al-Ahsa is a Saudi governorate located in the Eastern Province, 328 km from the capital Riyadh. It covers an area of 379,000 km2, which is equivalent to 20% of the land of the Kingdom of Saudi Arabia, and covers the desert of the Empty Quarter about three quarters of the governorate, while the populated area and activities represent 18% of the total area, and is represented in the cities of Hofuf and Mubarraz, which are among the ten largest cities at the level Kingdom, in addition to four main cities and 22 villages. According to 2017 statistics, Al-Ahsa topped the governorates of the eastern region in the population of about 1,041,863 people.</string>
+
+
+</resources>

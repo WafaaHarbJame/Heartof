@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:layout_gravity="center"
+
+    tools:context=".Activity.AddingActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/logoo" />
+    <TextView
+        android:id="@+id/adding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/adding_data_for_aplication" />
+
+    <Button
+        android:id="@+id/AddResturant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addresturant"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/addstyle"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/AddHotle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addhotle"
+        android:background="@drawable/addstyle"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/AddMilestone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/addstyle"
+        android:textColor="@color/white"
+        android:text="@string/addmilestone" />
+
+    <Button
+        android:id="@+id/AddSoqaa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/addstyle"
+        android:textColor="@color/white"
+        android:text="@string/addsoqaa" />
+    <Button
+        android:id="@+id/addoffice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/addstyle"
+        android:textColor="@color/white"
+        android:text="@string/addoffice" />
+
+
+</LinearLayout>

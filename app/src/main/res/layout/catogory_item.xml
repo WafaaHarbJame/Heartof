@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8dp"
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/catogory_photo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#ffffff"
+        android:scaleType="centerCrop"
+        android:src="@drawable/raidaa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/catogory_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/catogory_photo"
+        android:background="@drawable/button_boarder"
+        android:padding="@dimen/margin_8dp"
+        android:text="part1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</RelativeLayout>

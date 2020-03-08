@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "774630002072",
+    "firebase_url": "https://heart-of-the-world.firebaseio.com",
+    "project_id": "heart-of-the-world",
+    "storage_bucket": "heart-of-the-world.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774630002072:android:eb80fc35ebd4812ea02fed",
+        "android_client_info": {
+          "package_name": "com.heartoftheworldapp.heartoftheworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774630002072-nsmi57nb6b9g9n1624843h5gih2qglvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfrfOTq9OUJf2oj-IpfmVx_QyV8NFLbZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774630002072-nsmi57nb6b9g9n1624843h5gih2qglvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
