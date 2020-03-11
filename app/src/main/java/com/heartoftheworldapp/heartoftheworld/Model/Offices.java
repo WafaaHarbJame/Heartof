@@ -7,14 +7,18 @@ public class Offices {
     private String officearname;
     private String officeenname ;
     private String officenumber;
+    private boolean is_favorite;
+    private String City_Name;
 
-    public Offices(int id, String officetype_ar, String officetype_en, String officearname, String officeenname, String officenumber) {
+    public Offices(int id, String officetype_ar, String officetype_en, String officearname, String officeenname, String officenumber, boolean is_favorite, String city_Name) {
         this.id = id;
         this.officetype_ar = officetype_ar;
         this.officetype_en = officetype_en;
         this.officearname = officearname;
         this.officeenname = officeenname;
         this.officenumber = officenumber;
+        this.is_favorite = is_favorite;
+        City_Name = city_Name;
     }
 
     public Offices() {
@@ -66,5 +70,21 @@ public class Offices {
 
     public void setOfficenumber(String officenumber) {
         this.officenumber = officenumber;
+    }
+
+    public boolean isIs_favorite() {
+        return is_favorite;
+    }
+
+    public void setIs_favorite(boolean is_favorite) {
+        this.is_favorite = is_favorite;
+    }
+
+    public String getCity_Name() {
+        return City_Name;
+    }
+
+    public void setCity_Name(String city_Name) {
+        City_Name = city_Name;
     }
 }

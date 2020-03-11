@@ -14,7 +14,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-public class SettingFragment extends Fragment {
+public class SettingFragment extends BaseFragment {
 
     private CircleImageView mToolbarLogo;
     private TextView mTvMenuMyAccount;
@@ -28,10 +28,8 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
           mToolbarLogo = view.findViewById(R.id.toolbarLogo);
-        mTvMenuMyAccount = view.findViewById(R.id.tvMenuMyAccount);
         mTvLangauge = view.findViewById(R.id.tvLangauge);
         mView = view.findViewById(R.id.view);
-        mTvinformation = view.findViewById(R.id.tvinformation);
         mTvLangauge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

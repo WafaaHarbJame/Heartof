@@ -94,9 +94,10 @@ public class AddResturantActivity extends BaseActivity {
                         mResturantsEnName.getText().toString(), mResturantsArDesc.getText().toString(),
                         mResturantsEnDesc.getText().toString(), mResturantsLink.getText().toString(),
                         mResturantsPhone.getText().toString(), mResturantsArAddress.getText().toString(),
-                        mResturantsEnAddress.getText().toString());
+                        mResturantsEnAddress.getText().toString(),false,city_name);
 
-                mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                mFirebaseDatabase.child(city_name).child(counter + "")
+                        .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){

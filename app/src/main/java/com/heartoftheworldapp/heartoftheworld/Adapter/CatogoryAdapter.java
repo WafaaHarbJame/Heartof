@@ -84,7 +84,6 @@ public class CatogoryAdapter extends RecyclerView.Adapter<CatogoryAdapter.MyHold
 
                     Intent intent=new Intent(context, ResturantActivity.class);
                     intent.putExtra("cityname",catogories.get(position).getCity());
-                 //   Toast.makeText(context, "catadapter"+catogories.get(position).getCity(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }

@@ -33,29 +33,7 @@
     </androidx.appcompat.widget.Toolbar>
 
 
-    <TextView
-        android:id="@+id/tvMenuMyAccount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:drawableStart="@drawable/ic_perm_identity_black_24dp"
-        android:drawableEnd="@drawable/prfoliearraowenglish"
-        android:drawablePadding="@dimen/activity_vertical_margin_medium"
-        android:gravity="center|start"
-        android:background="@drawable/boarder"
 
-        android:padding="@dimen/activity_vertical_margin_medium"
-        android:text="@string/myAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginStart="@dimen/activity_vertical_margin_medium"
-        android:layout_marginEnd="@dimen/activity_vertical_margin_medium"
-        android:background="@color/colorLightGray"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -73,6 +51,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:padding="@dimen/activity_vertical_margin_medium"
+            android:background="@drawable/boarder"
+
             android:text="@string/language"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -91,19 +71,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvinformation"
-        android:padding="@dimen/activity_vertical_margin_medium"
-        android:drawableStart="@drawable/ic_info_black_24dp"
-        android:drawableEnd="@drawable/prfoliearraowenglish"
-        android:text="@string/information"
-        android:gravity="center|start"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:drawablePadding="@dimen/activity_vertical_margin_medium"/>
 
 
 </LinearLayout>

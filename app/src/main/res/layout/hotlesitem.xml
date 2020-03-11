@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_margin="4dp"
     android:padding="8dp"
-    android:textDirection="rtl"
-    android:layoutDirection="rtl"
+    android:textDirection="ltr"
+    android:layoutDirection="ltr"
     android:id="@+id/container"
 
     android:background="@drawable/whoiteboarder"
@@ -43,22 +43,36 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" السعر"
+        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="12sp"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
+    <ImageView
+        android:id="@+id/ic_favorit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_favoriteempty"
+        android:textSize="12sp"
+        android:visibility="gone"
+
+
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="70dp"
-        android:layout_height="0dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/userimage"
         android:src="@drawable/damaa"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
         app:civ_border_color="@color/white"
-        app:layout_constraintTop_toTopOf="@+id/price"
         >
 
     </de.hdodenhof.circleimageview.CircleImageView>

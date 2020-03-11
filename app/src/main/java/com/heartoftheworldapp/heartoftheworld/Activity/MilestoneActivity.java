@@ -53,7 +53,6 @@ public class MilestoneActivity extends BaseActivity {
         if(intent!=null) {
 
             city_name=intent.getStringExtra("cityname");
-            Toast(city_name);
 
         }
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Milestones").child(city_name);;

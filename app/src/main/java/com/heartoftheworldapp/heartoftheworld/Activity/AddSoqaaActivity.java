@@ -88,7 +88,7 @@ public class AddSoqaaActivity extends BaseActivity {
                         mSoaqArName.getText().toString(),
                         mSoaqEnName.getText().toString(),
                         mSoaqArDesc.getText().toString(),
-                        mSoaqEnDesc.getText().toString(),mSoaqImage.getText().toString());
+                        mSoaqEnDesc.getText().toString(),mSoaqImage.getText().toString(),false,city_name);
 
                 mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

@@ -54,7 +54,6 @@ public class OfficeActivity extends BaseActivity {
         if(intent!=null) {
 
             city_name=intent.getStringExtra("cityname");
-            Toast(city_name);
 
         }
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Offices").child(city_name);;

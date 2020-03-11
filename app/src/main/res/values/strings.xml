@@ -126,7 +126,7 @@
     <string name="yes">yes</string>
     <string name="logintxt">Wait To login </string>
     <string name="logout">logout</string>
-    <string name="signUptext">يتم الان التحقق من البيانات</string>
+    <string name="signUptext">Now check data</string>
     <string name="desc">description</string>
     <string name="addresturant">Add Restaurant</string>
     <string name="addhotle">Add Hotel</string>
@@ -192,6 +192,21 @@ km2.
     <string name="DamaaAbout">"  Dammam is located in the eastern region, and is the largest city in the eastern region. It is located on three sides of the Arab Gulf; northern, eastern, and southern. It is distinguished as a commercial and residential center. It includes the administrative bodies of the region and government departments. "</string>
     <string name="Jazanabout">"  Jizan is the administrative capital of the southwestern region of the Kingdom of Saudi Arabia. It has Jazan Port as well as the regional airport."</string>
     <string name="AlHasaabout">Al-Ahsa is a Saudi governorate located in the Eastern Province, 328 km from the capital Riyadh. It covers an area of 379,000 km2, which is equivalent to 20% of the land of the Kingdom of Saudi Arabia, and covers the desert of the Empty Quarter about three quarters of the governorate, while the populated area and activities represent 18% of the total area, and is represented in the cities of Hofuf and Mubarraz, which are among the ten largest cities at the level Kingdom, in addition to four main cities and 22 villages. According to 2017 statistics, Al-Ahsa topped the governorates of the eastern region in the population of about 1,041,863 people.</string>
+    <string name="details">details</string>
+    <string name="resturant_location">Resturant Location</string>
+    <string name="checkInternet">check Internet Connection</string>
+    <string name="favorite">Favorite Resturants</string>
+    <string name="favorite_office">Favorite Office</string>
+    <string name="favorite_hotels">Favorite Hotels</string>
+    <string name="favorite_soqa">Favorite Soqa</string>
+    <string name="favorite_milstone">favorite  Milstone</string>
+    <string name="mustlogin">"You must login To add to favorite or comment "</string>
+    <string name="addfavorite">add favorite</string>
+    <string name="addcomment">addcomment</string>
+    <string name="comment">comments</string>
+    <string name="comment_text">Comment text</string>
+    <string name="comment_textrequied">comment Text Requied</string>
+    <string name="user">User</string>
 
 
 </resources>

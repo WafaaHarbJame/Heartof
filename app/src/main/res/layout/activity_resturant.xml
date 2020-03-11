@@ -26,6 +26,7 @@
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
+        android:background="@color/backgrounrecycler"
         android:id="@+id/allswip"
         android:layout_marginTop="50dp"
 

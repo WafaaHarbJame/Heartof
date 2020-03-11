@@ -25,6 +25,7 @@
         android:layout_width="match_parent"
         android:id="@+id/allswip"
         android:layout_marginTop="50dp"
+        android:background="@color/backgrounrecycler"
 
         android:layout_height="match_parent">
 

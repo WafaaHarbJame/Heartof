@@ -81,13 +81,13 @@ public class AddMilestonesActivity extends BaseActivity {
 
                 final Milestonse milestonse = new Milestonse(counter,
                         mMilestonseArDesc.getText().toString(), mMilestonseEnDesc.getText().toString(),
-                        mMilestonseImage.getText().toString());
-                mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                        mMilestonseImage.getText().toString(),false,city_name);
+                mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
                             counter=counter+1;
-                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(milestonse);
+                            mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").setValue(milestonse);
 
                             mMilestonseArDesc.setText("");
                             mMilestonseEnDesc.setText("");
@@ -97,7 +97,7 @@ public class AddMilestonesActivity extends BaseActivity {
                             Toast(getString(R.string.addingsucess));
                         }
                         else {
-                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(milestonse);
+                            mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").setValue(milestonse);
                             mMilestonseArDesc.setText("");
                             mMilestonseEnDesc.setText("");
                             mMilestonseImage.setText("");

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/ic_favoritewhite"
+            app:showAsAction="always"
+
+            android:title="@string/addfavorite" />
+
+        <item
+            android:id="@+id/comment"
+            android:icon="@drawable/ic_message"
+            app:showAsAction="always"
+            android:title="@string/addcomment" />
+
+    </group>
+
+
+</menu>

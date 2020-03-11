@@ -161,16 +161,16 @@ public class SignUpActivity extends BaseActivity {
                             } else {
                                 mFirebaseDatabase.child(phone).setValue(users);
                                 Toast.makeText(SignUpActivity.this, "تم التسجيل بنجاج  ", Toast.LENGTH_SHORT).show();
-                                SharedPreferences.Editor editor_username = sharedPreferences.edit();
-
                                 sharedPManger.SetData(AppConstants.KEY_EMAIL, mEtSignUpEmail.getText().toString());
                                 sharedPManger.SetData(AppConstants.KEY_passward, mEtSignUpPassword.getText().toString());
                                 sharedPManger.SetData(AppConstants.KEY_PHONE, CountryCode + mEtSignUpPhone.getText().toString());
+                                sharedPManger.SetData(AppConstants.KEY_username, mEtSignUpFullName.getText().toString());
                                 sharedPManger.SetData(AppConstants.ISLOGIN,true);
                                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                 intent.putExtra(AppConstants.KEY_EMAIL, mEtSignUpEmail.getText().toString());
                                 intent.putExtra(AppConstants.KEY_passward, mEtSignUpPassword.getText().toString());
                                 intent.putExtra(AppConstants.KEY_PHONE, CountryCode + mEtSignUpPhone.getText().toString());
+                                intent.putExtra(AppConstants.KEY_username, mEtSignUpFullName.getText().toString());
 
                                 startActivity(intent);
 

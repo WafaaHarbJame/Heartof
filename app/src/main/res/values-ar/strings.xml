@@ -49,7 +49,7 @@
         This is the name that users will see when interacting with this channel.
         It should describe the category of notifications that will be sent through this channel
      -->
-    <string name="default_notification_channel_name" translatable="true">Weather</string>
+    <string name="default_notification_channel_name" translatable="true">"المناخ "</string>
     <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
     <string name="fcm_message">FCM Message</string>
     <string name="fullNameRequired">الاسم كاملاً مطلوب !</string>
@@ -195,7 +195,7 @@
     <string name="hotle_link">رابط موقع الفندق</string>
     <string name="hotle_price">سعر الليلة الواحدة</string>
     <string name="hotle_image">رابط صورة الفندق</string>
-    <string name="milestonse_image">رابط صورة المطعم</string>
+    <string name="milestonse_image">رابط صورة المعلم </string>
     <string name="milestonse_en_desc">وصف المعلم بالانجليزي</string>
     <string name="milestonse_ar_desc">وصف المعلم بالعربي</string>
     <string name="resturants_ar_address">عنوان  المطعم بالعربي</string>
@@ -243,5 +243,20 @@
     <string name= "DamaaAbout">تقع مدينة الدمام في المنطقة الشرقية، وتعد أكبر مدن المنطقة الشرقية، وتقع على ثلاث جهات من الخليج العربي؛ الشمالية، والشرقية، والجنوبية، وتتميز باعتبارها مركزاً تجارياً وسكنياً، فهي تضم الهيئات الإدارية للمنطقة والدوائر الحكومية</string>
     <string name= "Tabukabout">مقر إمارة منطقة تبوك وكبرى مدن شمال السعودية، وحولها بعض من أهم الآثار في الجزيرة العربية.تعد منطقة تبوك البوابة الشمالية للجزيرة العربية، وطريقاً حيوياً للتجارة والحجاج والمعتمرين من خارج شبه الجزيرة العربية. وهي من المناطق الزراعية المهمة في المملكة</string>
     <string name= "Hailabout">تقع في شمال نجد من المناطق الوسطى، وهي مقر إمارة منطقة حائل. وهي العاصمة الإدارية والإقليمية للمنطقة. وتشتهر حائل بالجبلين الشهيرين جبل سلمى وجبل أجا. تقع مدينة حائل في منطقة جبل أجا غربي وادي الأديرع وفي قلبها تقع بئر سماح المشهورة بغزارة وعذوبة مياهها، وتمتد المدينة على شكل قوس حول جبل السمراء ويحدها من الشمال والغرب جبل أجا</string>
+    <string name="details">تفاصيل</string>
+    <string name="resturant_location">موقع المطعم على الخريطة </string>
+    <string name="checkInternet">لا يوجد اتصال بالانترنت </string>
+    <string name="favorite">المطاعم المفضلة</string>
+    <string name="favorite_office">المكاتب المفضلة</string>
+    <string name="favorite_soqa">الاسواق المفضلة</string>
+    <string name="favorite_milstone" >المعالم المفضلة</string>
+    <string name="favorite_hotels">الفنادق المفضلة</string>
+    <string name="mustlogin">"لا يمكنك التعليق اوالاضافة للمفضلة بدون تسجيل دخول "</string>
+    <string name="addfavorite">اضف للمفضلة</string>
+    <string name="addcomment">اضف تعليق</string>
+    <string name="comment">التعليقات</string>
+    <string name="comment_text">نص التعليق</string>
+    <string name="comment_textrequied">"نص التعليق مطلوب "</string>
+    <string name="user">مستخدم</string>
 
 </resources>

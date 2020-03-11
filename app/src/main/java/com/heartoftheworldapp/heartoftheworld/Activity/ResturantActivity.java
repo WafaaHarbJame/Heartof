@@ -35,8 +35,6 @@ public class ResturantActivity extends BaseActivity {
     private  List<Resturants> resturants;
     Toolbar toolbar;
     String city_name;
-
-
     ResturantAdapter resturantAdapter;
 
     @Override
@@ -58,7 +56,6 @@ public class ResturantActivity extends BaseActivity {
         if(intent!=null) {
 
             city_name=intent.getStringExtra("cityname");
-            Toast(city_name);
 
         }
 
@@ -107,9 +104,6 @@ public class ResturantActivity extends BaseActivity {
                     for(DataSnapshot livenapshot:dataSnapshot.getChildren()) {
                         Resturants request = livenapshot.getValue(Resturants.class);
                         resturants.add(request);
-
-
-
 
                     }
 

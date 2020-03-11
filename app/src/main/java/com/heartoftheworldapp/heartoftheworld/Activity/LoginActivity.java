@@ -41,6 +41,7 @@ public class LoginActivity extends BaseActivity {
     private DatabaseReference mFirebaseDatabase;
     private TextView mLoginvistor;
     SharedPManger sharedPManger;
+    private Button mAddingDataForAplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +54,10 @@ public class LoginActivity extends BaseActivity {
         mButtonSignInSign = findViewById(R.id.buttonSignInSign);
         mButtonSignInSignUp = findViewById(R.id.buttonSignInSignUp);
         mLoginvistor = findViewById(R.id.loginvistor);
-        sharedPManger=new SharedPManger(getActiviy());
+        sharedPManger = new SharedPManger(getActiviy());
         FirebaseInstanceId.getInstance().getToken();
+        mAddingDataForAplication = findViewById(R.id.adding_data_for_aplication);
+
         FirebaseApp.initializeApp(this);
         mCcp.setOnTouchListener(new View.OnTouchListener() {
 
@@ -73,12 +76,19 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-        mLoginvistor.setOnClickListener(new View.OnClickListener() {
+        mAddingDataForAplication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, AddingActivity.class);
                 startActivity(intent);
-                finish();
+            }
+        });
+
+        mLoginvistor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
         sharedPreferences = getSharedPreferences(AppConstants.KEY_FILE, MODE_PRIVATE);
@@ -107,7 +117,7 @@ public class LoginActivity extends BaseActivity {
                     mEtSignInPassword.setError(getString(R.string.passwordRequired));
                     mEtSignInPassword.requestFocus();
                 } else {
-                    showProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
+                    showProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
                     final String phone = mEtSignUpPhone.getText().toString();
                     final String password = mEtSignInPassword.getText().toString();
@@ -120,31 +130,35 @@ public class LoginActivity extends BaseActivity {
                                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 
                                     comparepassward = String.valueOf(dataSnapshot.child("passward").getValue());
+                                    String username= String.valueOf(dataSnapshot.child("username").getValue());
+                                    sharedPManger.SetData(AppConstants.KEY_username, username);
+
                                     if (password.matches(comparepassward)) {
                                         sharedPManger.SetData(AppConstants.KEY_PHONE, CountryCode + mEtSignUpPhone.getText().toString());
                                         sharedPManger.SetData(AppConstants.KEY_passward, mEtSignInPassword.getText().toString());
-                                        sharedPManger.SetData(AppConstants.ISLOGIN,true);
+                                        sharedPManger.SetData(AppConstants.KEY_username, username);
+
+                                        sharedPManger.SetData(AppConstants.ISLOGIN, true);
                                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                         startActivity(intent);
-                                        hideProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
+                                        hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
 
                                     } else {
                                         Toast.makeText(LoginActivity.this, "كلمة المرور خطأ ", Toast.LENGTH_SHORT).show();
                                         mEtSignInPassword.setText("");
-                                        hideProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
-
+                                        hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
 
                                     }
 
-                                    hideProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
+                                    hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
                                 }
 
 
                             } else {
-                                hideProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
+                                hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
                                 // mFirebaseDatabase.child(name).setValue(users);
                                 Toast.makeText(LoginActivity.this, "هذا الحساب غير موجود", Toast.LENGTH_SHORT).show();

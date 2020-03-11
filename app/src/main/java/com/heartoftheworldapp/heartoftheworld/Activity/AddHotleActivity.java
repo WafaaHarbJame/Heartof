@@ -40,7 +40,7 @@ public class AddHotleActivity extends BaseActivity {
     int counter = 0;
     String city_name;
     Toolbar toolbar;
-
+    int  transActionID;
     SharedPManger sharedPManger;
 
     @Override
@@ -66,6 +66,7 @@ public class AddHotleActivity extends BaseActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle(getString(R.string.addhotle));
         actionBar.setTitle(getString(R.string.addhotle));
+        transActionID = (int) System.currentTimeMillis();
 
         mCityname.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -90,19 +91,19 @@ public class AddHotleActivity extends BaseActivity {
 
 
                 }
-                final Hotles hotles = new Hotles(counter,
+                final Hotles hotles = new Hotles(transActionID,
                         mHotleArName.getText().toString(), mHotleEnName.getText().toString(),
                         mHotleArDesc.getText().toString(), mHotleEnDesc.getText().toString(),
                         mHotleLink.getText().toString(), mHotlePrice.getText().toString(),
-                        mHotleImage.getText().toString());
+                        mHotleImage.getText().toString(),false,city_name);
 
 
-                mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                mFirebaseDatabase.child(city_name).child(transActionID + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
                             counter=counter+1;
-                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(hotles);
+                            mFirebaseDatabase.child(city_name).child(transActionID+"").setValue(hotles);
                             mHotleArName.setText("");
                             mHotleEnName.setText("");
                             mHotleArDesc.setText("");
@@ -115,7 +116,7 @@ public class AddHotleActivity extends BaseActivity {
                         }
 
                         else {
-                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(hotles);
+                            mFirebaseDatabase.child(city_name).child(transActionID+"").setValue(hotles);
                             mHotleArName.setText("");
                             mHotleEnName.setText("");
                             mHotleArDesc.setText("");

@@ -19,6 +19,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriMilestoneFragment;
+import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteHotleFragment;
+import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteResturantFragment;
+import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteSoqaFragment;
+import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteofficeFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.HomeBasicFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.SettingFragment;
 import com.heartoftheworldapp.heartoftheworld.Model.AppConstants;
@@ -39,6 +44,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     SharedPreferences.Editor editor_signUp;
     private Boolean saveLogin;
     private AppBarConfiguration mAppBarConfiguration;
+    private Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +64,20 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        navigationView.setItemIconTintList(null);
 
         Menu menu = navigationView.getMenu();
         if (saveLogin) {
             menu.findItem(R.id.nav_exitapp).setTitle(R.string.logout);
+            menu.findItem(R.id.favorite_hotels).setVisible(true);
+            menu.findItem(R.id.favorite).setVisible(true);
 
 
-        }
-        else {
+
+        } else {
             menu.findItem(R.id.nav_exitapp).setTitle(getString(R.string.login));
-
+            menu.findItem(R.id.favorite_hotels).setVisible(false);
+            menu.findItem(R.id.favorite).setVisible(false);
 
 
 
@@ -99,9 +109,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         item.setVisible(false);
 
 
-
-
-
         return true;
     }
 
@@ -121,33 +128,31 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new SettingFragment(), "HomeFragment").commit();
 
 
+        } else if (id == R.id.favorite) {
+            toolbar.setTitle(getString(R.string.favorite ));
 
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, new FavoriteResturantFragment(), "HomeFragment").commit();
         }
-        else if (id == R.id.nav_profile) {
-            toolbar.setTitle(getString(R.string.action_settings));
+        else if (id == R.id.favorite_hotels) {
+            toolbar.setTitle(getString(R.string.favorite_hotels));
 
             getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
-                    new ShareFragment(), "HomeFragment").commit();
+                    new FavoriteHotleFragment(), "HomeFragment").commit();
 
 
         }
-
-
 
 
 
         else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT,
-                    "share the app : https://play.google.com/store/apps/details?id=com.heartoftheworldapp.heartoftheworld");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "share the app : https://play.google.com/store/apps/details?id=com.heartoftheworldapp.heartoftheworld");
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
 
 
-        }
-        else if (id == R.id.nav_exitapp) {
+        } else if (id == R.id.nav_exitapp) {
 
             if (saveLogin) {
                 editor_signUp = sharedPreferences.edit();
@@ -158,9 +163,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 intent.putExtra(AppConstants.ISLOGIN, false);
                 startActivity(intent);
                 finish();
-            }
-
-            else {
+            } else {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
 
@@ -168,11 +171,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             }
 
 
-
-
-
-            }
-
+        }
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

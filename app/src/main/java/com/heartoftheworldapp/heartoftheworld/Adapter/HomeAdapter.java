@@ -125,7 +125,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("id", catogories.get(position).getId());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -135,7 +135,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("id", catogories.get(position).getId());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -146,7 +146,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -156,7 +156,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("id", catogories.get(position).getId());
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -166,7 +165,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("id", catogories.get(position).getId());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -177,7 +175,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -187,7 +184,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("id", catogories.get(position).getId());
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -198,7 +194,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -209,7 +204,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -220,7 +214,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -231,7 +224,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }
@@ -242,7 +234,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
                     intent.putExtra("cityname", catogories.get(position).getCit_name_en());
                     intent.putExtra("cityarname", catogories.get(position).getCity_name());
 
-                    Toast.makeText(context, "" + catogories.get(position).getCit_name_en(), Toast.LENGTH_SHORT).show();
                     context.startActivity(intent);
 
                 }

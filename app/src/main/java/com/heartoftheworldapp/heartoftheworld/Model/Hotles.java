@@ -1,17 +1,18 @@
 package com.heartoftheworldapp.heartoftheworld.Model;
 
 public class Hotles {
-    private  int id;
-    private String  Hotle_ar_name;
-    private  String Hotle_en_name;
+    private int id;
+    private String Hotle_ar_name;
+    private String Hotle_en_name;
     private String Hotle_ar_desc;
-    private  String Hotle_en__desc;
-    private  String Hotle_link;
-    private  String Hotle_price;
-    private  String  Hotle_image;
+    private String Hotle_en__desc;
+    private String Hotle_link;
+    private String Hotle_price;
+    private String Hotle_image;
+    private boolean is_favorite;
+    private String City_Name;
 
-    public Hotles(int id, String hotle_ar_name, String hotle_en_name, String hotle_ar_desc, String hotle_en__desc,
-                  String hotle_link, String hotle_price, String hotle_image) {
+    public Hotles(int id, String hotle_ar_name, String hotle_en_name, String hotle_ar_desc, String hotle_en__desc, String hotle_link, String hotle_price, String hotle_image, boolean is_favorite, String city_Name) {
         this.id = id;
         Hotle_ar_name = hotle_ar_name;
         Hotle_en_name = hotle_en_name;
@@ -20,6 +21,8 @@ public class Hotles {
         Hotle_link = hotle_link;
         Hotle_price = hotle_price;
         Hotle_image = hotle_image;
+        this.is_favorite = is_favorite;
+        City_Name = city_Name;
     }
 
     public Hotles() {
@@ -87,5 +90,21 @@ public class Hotles {
 
     public void setHotle_image(String hotle_image) {
         Hotle_image = hotle_image;
+    }
+
+    public boolean isIs_favorite() {
+        return is_favorite;
+    }
+
+    public void setIs_favorite(boolean is_favorite) {
+        this.is_favorite = is_favorite;
+    }
+
+    public String getCity_Name() {
+        return City_Name;
+    }
+
+    public void setCity_Name(String city_Name) {
+        City_Name = city_Name;
     }
 }

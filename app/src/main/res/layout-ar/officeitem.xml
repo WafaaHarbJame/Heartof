@@ -9,19 +9,41 @@
     android:layout_margin="8dp"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/officetype"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:lineSpacingMultiplier="1.5"
-        android:textAlignment="gravity"
+        android:layout_marginTop="@dimen/margin_8dp"
         android:layout_marginStart="@dimen/margin_8dp"
         android:layout_marginEnd="@dimen/margin_8dp"
-        android:text="officetype" />
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/officetype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:textAlignment="gravity"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/margin_8dp"
+            android:layout_marginEnd="@dimen/margin_8dp"
+            android:text="officetype" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_favoriteempty"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:id="@+id/ic_favorit"
+            android:visibility="gone"
+
+            android:layout_height="wrap_content">
+
+        </ImageView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/officename"

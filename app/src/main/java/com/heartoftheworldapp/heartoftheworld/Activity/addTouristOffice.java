@@ -80,7 +80,10 @@ public class addTouristOffice extends BaseActivity {
                     counter = sharedPManger.getDataInt(AppConstants.counter, 0);
                 }
 
-                final Offices offices = new Offices(counter, mOfficetypear.getText().toString(), mOfficetypeen.getText().toString(), mOfficearname.getText().toString(), mOfficeenname.getText().toString(), mOfficenumber.getText().toString());
+                final Offices offices = new Offices(counter, mOfficetypear.getText().toString(),
+                        mOfficetypeen.getText().toString(),
+                        mOfficearname.getText().toString(), mOfficeenname.getText().toString(),
+                        mOfficenumber.getText().toString(),false,city_name);
 
                 mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override

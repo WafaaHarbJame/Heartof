@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.LocationActivity"></activity>
+        <activity android:name=".Activity.MilestoneDetailsActivity"></activity>
+        <activity android:name=".Activity.Intent_Activity" />
+        <activity android:name=".Activity.CommentActivityActivity" />
+        <activity android:name=".Activity.HotlDetailsActivity" />
+        <activity android:name=".Activity.LocationActivity" />
         <activity android:name=".Activity.HotleActivity" />
         <activity android:name=".Activity.AboutCityActivity" />
         <activity android:name=".Activity.SoqaaActivity" />

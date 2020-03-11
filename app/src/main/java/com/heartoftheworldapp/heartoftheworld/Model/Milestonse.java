@@ -5,12 +5,16 @@ public class Milestonse {
     private String Milestonse__ar_desc;
     private  String Milestonse__en__desc;
     private  String  Milestonse_image;
+    private boolean is_favorite;
+    private String City_Name;
 
-    public Milestonse(int id, String milestonse__ar_desc, String milestonse__en__desc, String milestonse_image) {
+    public Milestonse(int id, String milestonse__ar_desc, String milestonse__en__desc, String milestonse_image, boolean is_favorite, String city_Name) {
         this.id = id;
         Milestonse__ar_desc = milestonse__ar_desc;
         Milestonse__en__desc = milestonse__en__desc;
         Milestonse_image = milestonse_image;
+        this.is_favorite = is_favorite;
+        City_Name = city_Name;
     }
 
     public Milestonse() {
@@ -46,5 +50,21 @@ public class Milestonse {
 
     public void setMilestonse_image(String milestonse_image) {
         Milestonse_image = milestonse_image;
+    }
+
+    public boolean isIs_favorite() {
+        return is_favorite;
+    }
+
+    public void setIs_favorite(boolean is_favorite) {
+        this.is_favorite = is_favorite;
+    }
+
+    public String getCity_Name() {
+        return City_Name;
+    }
+
+    public void setCity_Name(String city_Name) {
+        City_Name = city_Name;
     }
 }

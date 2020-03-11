@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.heartoftheworldapp.heartoftheworld.Adapter.HotlesAdapter;
 import com.heartoftheworldapp.heartoftheworld.Adapter.SoqaAdapter;
 import com.heartoftheworldapp.heartoftheworld.Model.Alsoaq;
+import com.heartoftheworldapp.heartoftheworld.Model.Comments;
 import com.heartoftheworldapp.heartoftheworld.Model.Hotles;
 import com.heartoftheworldapp.heartoftheworld.R;
 
@@ -34,6 +35,8 @@ public class HotleActivity extends BaseActivity {
     private DatabaseReference mFirebaseDatabase;
     private SwipeRefreshLayout mAllswip;
     private List<Hotles> hotles;
+    private List<Comments> comments;
+
     Toolbar toolbar;
     String city_name;
 

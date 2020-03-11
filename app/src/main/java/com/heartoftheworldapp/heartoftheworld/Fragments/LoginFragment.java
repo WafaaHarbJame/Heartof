@@ -38,7 +38,7 @@ import static android.content.Context.MODE_PRIVATE;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment {
+public class LoginFragment extends BaseFragment {
     String email, password, phone;
     String comparepassward;
     String fcm_token;
