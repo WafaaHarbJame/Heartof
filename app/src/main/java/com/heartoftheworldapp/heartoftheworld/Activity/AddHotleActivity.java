@@ -25,6 +25,8 @@ import com.heartoftheworldapp.heartoftheworld.Model.Resturants;
 import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
+import java.util.Date;
+
 public class AddHotleActivity extends BaseActivity {
 
     private Spinner mCityname;
@@ -40,7 +42,7 @@ public class AddHotleActivity extends BaseActivity {
     int counter = 0;
     String city_name;
     Toolbar toolbar;
-    int  transActionID;
+   // int  transActionID;
     SharedPManger sharedPManger;
 
     @Override
@@ -66,8 +68,8 @@ public class AddHotleActivity extends BaseActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle(getString(R.string.addhotle));
         actionBar.setTitle(getString(R.string.addhotle));
-        transActionID = (int) System.currentTimeMillis();
-
+        //transActionID = (int) System.currentTimeMillis();
+         counter = (int) new Date().getTime();
         mCityname.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
@@ -84,6 +86,8 @@ public class AddHotleActivity extends BaseActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                counter = (int) new Date().getTime();
+
                 counter = counter + 1;
                 sharedPManger.SetData(AppConstants.counter,counter);
                 if (sharedPManger.getDataInt(AppConstants.counter,0)>0) {
@@ -91,19 +95,19 @@ public class AddHotleActivity extends BaseActivity {
 
 
                 }
-                final Hotles hotles = new Hotles(transActionID,
+                final Hotles hotles = new Hotles(counter,
                         mHotleArName.getText().toString(), mHotleEnName.getText().toString(),
                         mHotleArDesc.getText().toString(), mHotleEnDesc.getText().toString(),
                         mHotleLink.getText().toString(), mHotlePrice.getText().toString(),
                         mHotleImage.getText().toString(),false,city_name);
 
 
-                mFirebaseDatabase.child(city_name).child(transActionID + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
                             counter=counter+1;
-                            mFirebaseDatabase.child(city_name).child(transActionID+"").setValue(hotles);
+                            mFirebaseDatabase.child(city_name).child(counter+"").setValue(hotles);
                             mHotleArName.setText("");
                             mHotleEnName.setText("");
                             mHotleArDesc.setText("");
@@ -116,7 +120,7 @@ public class AddHotleActivity extends BaseActivity {
                         }
 
                         else {
-                            mFirebaseDatabase.child(city_name).child(transActionID+"").setValue(hotles);
+                            mFirebaseDatabase.child(city_name).child(counter+"").setValue(hotles);
                             mHotleArName.setText("");
                             mHotleEnName.setText("");
                             mHotleArDesc.setText("");

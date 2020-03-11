@@ -30,6 +30,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:textColor="@color/colorPrimaryDark"
         android:gravity="center"
         android:text="" />
@@ -38,6 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
 
         android:text="" />
     <com.github.siyamed.shapeimageview.RoundedImageView

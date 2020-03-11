@@ -23,6 +23,8 @@ import com.heartoftheworldapp.heartoftheworld.Model.Resturants;
 import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
+import java.util.Date;
+
 public class AddResturantActivity extends BaseActivity {
 
     private EditText mResturantsArName;
@@ -63,6 +65,7 @@ public class AddResturantActivity extends BaseActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle(getString(R.string.addresturant));
+        counter = (int) new Date().getTime();
 
         sharedPManger=new SharedPManger(getApplicationContext());
 
@@ -83,6 +86,8 @@ public class AddResturantActivity extends BaseActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                counter = (int) new Date().getTime();
+
                 counter = counter + 1;
                 sharedPManger.SetData(AppConstants.counter,counter);
                 if (sharedPManger.getDataInt(AppConstants.counter,0)>0) {

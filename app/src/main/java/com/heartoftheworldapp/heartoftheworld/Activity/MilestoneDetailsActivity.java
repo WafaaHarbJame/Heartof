@@ -56,6 +56,8 @@ public class MilestoneDetailsActivity extends BaseActivity {
     int comment_type;
     private List<Comments> comments;
     CommentAdapter commentAdapter;
+    boolean ISLOGIN;
+    SharedPManger sharedPManger;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +76,7 @@ public class MilestoneDetailsActivity extends BaseActivity {
         appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
         mFirebaseCommentsDatabase = FirebaseDatabase.getInstance().getReference("Comments");
         KEY_username = sharedPManger.getDataString(AppConstants.KEY_username);
+        ISLOGIN = sharedPManger.getDataBool(AppConstants.ISLOGIN, false);
 
         commentdate = formatDate(Calendar.getInstance().getTime());
 
@@ -187,10 +190,11 @@ public class MilestoneDetailsActivity extends BaseActivity {
 
     @Override
     protected void onStart() {
+
         super.onStart();
+
         if (comment_type == 2) {
-            mFirebaseCommentsDatabase.child("MilestoneComments")
-                    .child(Milestonse_id + "").addValueEventListener(new ValueEventListener() {
+            mFirebaseCommentsDatabase.child("MilestoneComments").child(Milestonse_id + "").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     comments.clear();
@@ -214,6 +218,7 @@ public class MilestoneDetailsActivity extends BaseActivity {
             });
 
         }
-
     }
+
+
 }

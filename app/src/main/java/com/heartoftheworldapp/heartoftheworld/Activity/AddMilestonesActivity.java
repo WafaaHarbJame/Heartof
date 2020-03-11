@@ -25,6 +25,8 @@ import com.heartoftheworldapp.heartoftheworld.Model.Resturants;
 import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
+import java.util.Date;
+
 public class AddMilestonesActivity extends BaseActivity {
 
     private Spinner mCityname;
@@ -49,6 +51,8 @@ public class AddMilestonesActivity extends BaseActivity {
         mButton = findViewById(R.id.button);
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Milestones");
         final String id = mFirebaseDatabase.push().getKey();
+        counter = (int) new Date().getTime();
+
         sharedPManger=new SharedPManger(getApplicationContext());
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -73,6 +77,8 @@ public class AddMilestonesActivity extends BaseActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                counter = (int) new Date().getTime();
+
                 counter = counter + 1;
                 sharedPManger.SetData(AppConstants.counter,counter);
                 if (sharedPManger.getDataInt(AppConstants.counter,0)>0) {
@@ -82,12 +88,12 @@ public class AddMilestonesActivity extends BaseActivity {
                 final Milestonse milestonse = new Milestonse(counter,
                         mMilestonseArDesc.getText().toString(), mMilestonseEnDesc.getText().toString(),
                         mMilestonseImage.getText().toString(),false,city_name);
-                mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
+                mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if(dataSnapshot.exists()){
                             counter=counter+1;
-                            mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").setValue(milestonse);
+                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(milestonse);
 
                             mMilestonseArDesc.setText("");
                             mMilestonseEnDesc.setText("");
@@ -97,7 +103,7 @@ public class AddMilestonesActivity extends BaseActivity {
                             Toast(getString(R.string.addingsucess));
                         }
                         else {
-                            mFirebaseDatabase.child(city_name).child("Milestone"+counter + "").setValue(milestonse);
+                            mFirebaseDatabase.child(city_name).child(counter + "").setValue(milestonse);
                             mMilestonseArDesc.setText("");
                             mMilestonseEnDesc.setText("");
                             mMilestonseImage.setText("");

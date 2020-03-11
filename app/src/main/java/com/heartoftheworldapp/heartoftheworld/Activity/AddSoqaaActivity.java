@@ -25,6 +25,8 @@ import com.heartoftheworldapp.heartoftheworld.Model.Resturants;
 import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
+import java.util.Date;
+
 public class AddSoqaaActivity extends BaseActivity {
 
     private Spinner mCityname;
@@ -62,12 +64,13 @@ public class AddSoqaaActivity extends BaseActivity {
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle(getString(R.string.addsoqaa));
+        counter = (int) new Date().getTime();
 
         mCityname.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
                 city_name=mCityname.getSelectedItem().toString();
-                Toast(city_name);
+                //Toast(city_name);
 
             }
             public void onNothingSelected(AdapterView<?> parent) {
@@ -78,6 +81,8 @@ public class AddSoqaaActivity extends BaseActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                counter = (int) new Date().getTime();
+
                 counter = counter + 1;
                 sharedPManger.SetData(AppConstants.counter,counter);
                 if (sharedPManger.getDataInt(AppConstants.counter,0)>0) {

@@ -251,30 +251,38 @@ public class LocationActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mFirebaseFavDatabase.child(KEY_PHONE).
-                child("FavoriteResturant").child(returant_id+"").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               // for (DataSnapshot livenapshot : dataSnapshot.getChildren()) {
-                    if(dataSnapshot.exists()) {
+        if (ISLOGIN) {
+            mFirebaseFavDatabase.child(KEY_PHONE).
+                    child("FavoriteResturant").child(returant_id + "").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    // for (DataSnapshot livenapshot : dataSnapshot.getChildren()) {
+                    if (dataSnapshot.exists()) {
                         Resturants resturants = dataSnapshot.getValue(Resturants.class);
                         if (resturants.isIs_favorite()) {
                             menu.findItem(R.id.favorite).setIcon(R.drawable.ic_favoritered);
 
 
-
                         }
 
                     }
-                //}
+                    //}
 
-            }
+                }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+                }
+            });
+        }
     }
 
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.favorite).setVisible(true);
+
+        return super.onPrepareOptionsMenu(menu);
+    }
 }

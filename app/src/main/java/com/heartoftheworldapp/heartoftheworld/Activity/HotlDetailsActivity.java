@@ -224,28 +224,30 @@ public class HotlDetailsActivity extends BaseActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mFirebaseFavDatabase.child(KEY_PHONE).child("FavoriteHotles").child(hotel_id + "")
-                .addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               // for (DataSnapshot livenapshot : dataSnapshot.getChildren()) {
-                if(dataSnapshot.exists()) {
+        if(ISLOGIN) {
+            mFirebaseFavDatabase.child(KEY_PHONE).child("FavoriteHotles")
+                    .child(hotel_id + "").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    // for (DataSnapshot livenapshot : dataSnapshot.getChildren()) {
+                    if (dataSnapshot.exists()) {
 
-                    Hotles hotles1 = dataSnapshot.getValue(Hotles.class);
-                    if (hotles1.isIs_favorite()) {
+                        Hotles hotles1 = dataSnapshot.getValue(Hotles.class);
+                        if (hotles1.isIs_favorite()) {
                             menu.findItem(R.id.favorite).setIcon(R.drawable.ic_favoritered);
+                        }
+
                     }
+                    //}
 
                 }
-               //}
 
-            }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+                }
+            });
+        }
     }
 
     @Override

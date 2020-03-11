@@ -23,6 +23,8 @@ import com.heartoftheworldapp.heartoftheworld.Model.AppConstants;
 import com.heartoftheworldapp.heartoftheworld.Model.Offices;
 import com.heartoftheworldapp.heartoftheworld.R;
 
+import java.util.Date;
+
 public class addTouristOffice extends BaseActivity {
 
     int counter = 0;
@@ -56,13 +58,14 @@ public class addTouristOffice extends BaseActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         toolbar.setTitle(getString(R.string.addoffice));
         actionBar.setTitle(getString(R.string.addoffice));
+        counter = (int) new Date().getTime();
 
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Offices");
         mCityname.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
                 city_name = mCityname.getSelectedItem().toString();
-                Toast(city_name);
+               // Toast(city_name);
 
             }
 
@@ -73,6 +76,7 @@ public class addTouristOffice extends BaseActivity {
         mAddoffice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                counter = (int) new Date().getTime();
 
                 counter = counter + 1;
                 sharedPManger.SetData(AppConstants.counter, counter);
