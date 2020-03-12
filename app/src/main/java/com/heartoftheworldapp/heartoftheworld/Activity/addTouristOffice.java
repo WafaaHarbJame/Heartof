@@ -134,7 +134,6 @@ public class addTouristOffice extends BaseActivity {
             case android.R.id.home:
                 Intent intent = new Intent(getActiviy(), AddingActivity.class);
                 startActivity(intent);
-                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

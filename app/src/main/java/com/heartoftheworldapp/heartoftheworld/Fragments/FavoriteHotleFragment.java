@@ -110,11 +110,12 @@ public class FavoriteHotleFragment extends BaseFragment {
 
                     favoriteHotlesAdapter = new HotlesAdapter(getContext(),hotles);
                     mRecycler.setAdapter(favoriteHotlesAdapter);
+                    favoriteHotlesAdapter.notifyDataSetChanged();
+
 
                 }
 
 
-                favoriteHotlesAdapter.notifyDataSetChanged();
                 mAllswip.setRefreshing(false);
 
 

@@ -65,7 +65,13 @@ public class AddingActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getActiviy(), LoginActivity.class);
+        startActivity(intent);
+    }
 }

@@ -110,13 +110,13 @@ public class FavoriteResturantFragment extends BaseFragment {
                         Resturants request = livenapshot.getValue(Resturants.class);
                         resturants.add(request);
 
-
+                        resturantFavoriteAdapter = new ResturantAdapter( getContext(),resturants);
+                        mRecycler.setAdapter(resturantFavoriteAdapter);
+                        resturantFavoriteAdapter.notifyDataSetChanged();
 
                     }
 
-                    resturantFavoriteAdapter = new ResturantAdapter( getContext(),resturants);
-                    mRecycler.setAdapter(resturantFavoriteAdapter);
-                    resturantFavoriteAdapter.notifyDataSetChanged();
+
                     mAllswip.setRefreshing(false);
 
 

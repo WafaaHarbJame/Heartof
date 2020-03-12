@@ -13,15 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MilestoneDetailsActivity"></activity>
-        <activity android:name=".Activity.Intent_Activity" />
-        <activity android:name=".Activity.CommentActivityActivity" />
-        <activity android:name=".Activity.HotlDetailsActivity" />
-        <activity android:name=".Activity.LocationActivity" />
-        <activity android:name=".Activity.HotleActivity" />
-        <activity android:name=".Activity.AboutCityActivity" />
-        <activity android:name=".Activity.SoqaaActivity" />
-        <activity android:name=".Activity.MilestoneActivity" />
+        <activity android:name=".Activity.MilestoneDetailsActivity"  android:screenOrientation="portrait" ></activity>
+        <activity android:name=".Activity.Intent_Activity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.CommentActivityActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.HotlDetailsActivity"   android:screenOrientation="portrait" />
+        <activity android:name=".Activity.LocationActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.HotleActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.AboutCityActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.SoqaaActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.MilestoneActivity"  android:screenOrientation="portrait"  />
         <activity
             android:name=".Activity.AddingActivity"
             android:screenOrientation="portrait" />
