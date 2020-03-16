@@ -47,7 +47,8 @@ public class HomeFragment extends Fragment {
         recyclerView_cat = view.findViewById(R.id.recycler);
         gridLayoutManager=new GridLayoutManager(getContext(), 2);
         catogories = new ArrayList<>();
-        catogories.add(new Catogory(4,getString(R.string.information), "https://bizbangladesh.net/public/uploads/news/1559040261.png",""));
+        catogories.add(new Catogory(4,getString(R.string.information),
+                "https://bizbangladesh.net/public/uploads/news/1559040261.png",""));
         catogories.add(new Catogory(5,getString(R.string.Restaurants), "https://www.ahstatic.com/photos/5394_rsr001_00_p_1024x768.jpg",""));
         catogories.add(new Catogory(2,getString(R.string.hotels), "https://ihg.scene7.com/is/image/ihg/even-hotels-eugene-5405616297-4x3",""));
         catogories.add(new Catogory(3,getString(R.string.climate), "https://ichef.bbci.co.uk/images/ic/1200x675/p0617tch.jpg",""));

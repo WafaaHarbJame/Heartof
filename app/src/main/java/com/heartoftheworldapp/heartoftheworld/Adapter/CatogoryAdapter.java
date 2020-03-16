@@ -30,6 +30,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class CatogoryAdapter extends RecyclerView.Adapter<CatogoryAdapter.MyHolder> {
 
@@ -58,7 +59,7 @@ public class CatogoryAdapter extends RecyclerView.Adapter<CatogoryAdapter.MyHold
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger=new SharedPManger(context);
-        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
 
         if (!(catogories.isEmpty())) {
 
@@ -67,7 +68,26 @@ public class CatogoryAdapter extends RecyclerView.Adapter<CatogoryAdapter.MyHold
                    .error(R.drawable.logoo)
                    .placeholder(R.drawable.raidaa)
                    .into(holder.catogory_photo);
-       YoYo.with(Techniques.SlideInUp)
+
+            if(catogories.get(position).getId()==4){
+                Picasso.with(context).load(catogories.get(position).getCatogory_image())
+                        .error(R.drawable.hotles)
+                        .placeholder(R.drawable.office)
+                        .into(holder.catogory_photo);
+
+
+            }
+            if(catogories.get(position).getId()==4){
+                Picasso.with(context).load(catogories.get(position).getCatogory_image())
+                        .error(R.drawable.office)
+                        .placeholder(R.drawable.office)
+                        .into(holder.catogory_photo);
+
+
+            }
+
+
+            YoYo.with(Techniques.SlideInUp)
                     .duration(700)
                     .playOn(holder.catogory_photo);
             YoYo.with(Techniques.SlideInUp)
@@ -128,7 +148,6 @@ public class CatogoryAdapter extends RecyclerView.Adapter<CatogoryAdapter.MyHold
 
                     Intent intent=new Intent(context, AboutCityActivity.class);
                     intent.putExtra("cityname",catogories.get(position).getCity());
-
                     context.startActivity(intent);
 
                 }

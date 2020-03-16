@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.heartoftheworldapp.heartoftheworld.Activity.AdciceActivity;
+import com.heartoftheworldapp.heartoftheworld.Activity.AzkarActivity;
 import com.heartoftheworldapp.heartoftheworld.Activity.CatogoryActivity;
 import com.heartoftheworldapp.heartoftheworld.Activity.ImportantNumberActivity;
 import com.heartoftheworldapp.heartoftheworld.Activity.InformationActivity;
@@ -30,6 +31,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
 
@@ -57,26 +59,25 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger = new SharedPManger(context);
-        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
 
         if (!(catogories.isEmpty())) {
 
             if (appLanguage.matches("ar")) {
 
                 holder.catogory_name.setText(catogories.get(position).getCity_name());
-                holder.catogory_photo.setImageResource(catogories.get(position).getCity_image());
-
                 YoYo.with(Techniques.SlideInUp).duration(700).playOn(holder.catogory_photo);
                 YoYo.with(Techniques.SlideInUp).duration(700).playOn(holder.catogory_name);
             } else {
 
                 holder.catogory_name.setText(catogories.get(position).getCit_name_en());
-                holder.catogory_photo.setImageResource(catogories.get(position).getCity_image());
-
                 YoYo.with(Techniques.SlideInUp).duration(700).playOn(holder.catogory_photo);
                 YoYo.with(Techniques.SlideInUp).duration(700).playOn(holder.catogory_name);
 
             }
+
+            holder.catogory_photo.setImageResource(catogories.get(position).getCity_image());
+
 
 
         }
@@ -85,6 +86,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (catogories.get(position).getId() == 0) {
+
+                    Intent intent = new Intent(context, AzkarActivity.class);
+                    context.startActivity(intent);
+
+                }
                 if (catogories.get(position).getId() == 1) {
 
                     Intent intent = new Intent(context, InformationActivity.class);

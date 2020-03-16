@@ -24,6 +24,8 @@ public class SharedPManger {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, value);
         editor.apply();
+        editor.commit();
+
 
     }
 
@@ -32,6 +34,7 @@ public class SharedPManger {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt(key, value);
         editor.apply();
+        editor.commit();
 
     }
 
@@ -40,6 +43,8 @@ public class SharedPManger {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putFloat(key, value);
         editor.apply();
+        editor.commit();
+
 
     }
 

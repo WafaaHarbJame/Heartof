@@ -51,10 +51,6 @@ public class FavoriteofficeFragment extends BaseFragment {
         mRecycler = root.findViewById(R.id.recycler);
         mAllswip = root.findViewById(R.id.allswip);
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Offices");
-        mAllswip.setColorSchemeResources
-                (R.color.colorPrimary, android.R.color.holo_green_dark,
-                        android.R.color.holo_orange_dark,
-                        android.R.color.holo_blue_dark);
 
         InternetConnect = CheckInternet();
 
@@ -66,6 +62,10 @@ public class FavoriteofficeFragment extends BaseFragment {
 
         mRecycler.setLayoutManager(manager);
         mAllswip.setRefreshing(false);
+        mAllswip.setColorSchemeResources
+                (R.color.colorPrimary, android.R.color.holo_green_dark,
+                        android.R.color.holo_orange_dark,
+                        android.R.color.holo_blue_dark);
 
         mAllswip.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

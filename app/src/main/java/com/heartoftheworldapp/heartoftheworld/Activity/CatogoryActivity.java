@@ -67,7 +67,7 @@ public class CatogoryActivity extends BaseActivity {
             catogories.add(new Catogory(1,getString(R.string.Restaurants), "https://www.ahstatic.com/photos/5394_rsr001_00_p_1024x768.jpg",name));
             catogories.add(new Catogory(2,getString(R.string.hotels), "https://ihg.scene7.com/is/image/ihg/even-hotels-eugene-5405616297-4x3",name));
             catogories.add(new Catogory(3,getString(R.string.milestones), "https://albenaa-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/13.jpg",name));
-            catogories.add(new Catogory(4,getString(R.string.caroffices), "https://previews.123rf.com/images/graphicbee/graphicbee1705/graphicbee170500043/77464389-yellow-taxi-car-and-taxi-driver.jpg",name));
+            catogories.add(new Catogory(4,getString(R.string.caroffices), "https://ibb.co/4W0QYvW",name));
             catogories.add(new Catogory(5,getString(R.string.aboutcity), "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/combatting_bank_loan.jpg?itok=bAH7OB_o",name));
             catogories.add(new Catogory(6,getString(R.string.ALASQA), "https://cdn.openpr.com/R/9/R91489600_g.jpg",name));
             recyclerView_cat.setLayoutManager(gridLayoutManager);

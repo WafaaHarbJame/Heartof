@@ -17,6 +17,7 @@ import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
 import java.util.List;
+import java.util.Locale;
 
 public class FavoriteOfficeAdapter extends RecyclerView.Adapter<FavoriteOfficeAdapter.MyHolder> {
 
@@ -50,7 +51,7 @@ public class FavoriteOfficeAdapter extends RecyclerView.Adapter<FavoriteOfficeAd
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger = new SharedPManger(context);
-        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
 
         if (!(offices.isEmpty())) {
 

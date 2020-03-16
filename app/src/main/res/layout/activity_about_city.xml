@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -21,9 +20,15 @@
             android:background="?attr/colorPrimary"
             app:titleTextColor="@color/white"
             app:title="@string/aboutcity"
+
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+
+
     </com.google.android.material.appbar.AppBarLayout>
+
+
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -36,21 +41,38 @@
         android:layout_marginStart="16dp"
         android:textColor="@color/colorPrimaryDark"
         android:text="" />
+    <fragment
+        android:id="@+id/youtubeFragment"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="200dp"
+        android:name="com.google.android.youtube.player.YouTubePlayerFragment">
+    </fragment>
+<!--    <com.google.android.youtube.player.YouTubePlayerView-->
+<!--        android:id="@+id/youtube_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_height="200dp"/>-->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/tvcontent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:lineSpacingMultiplier="1.5"
             android:layout_marginTop="8dp"
-            android:text="" />
+            android:text="dddddddddd" />
 
     </androidx.core.widget.NestedScrollView>
-
 
 
 

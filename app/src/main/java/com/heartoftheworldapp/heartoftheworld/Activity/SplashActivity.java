@@ -2,6 +2,7 @@ package com.heartoftheworldapp.heartoftheworld.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
 
+import com.franmontiel.localechanger.LocaleChanger;
 import com.heartoftheworldapp.heartoftheworld.Model.AppConstants;
 import com.heartoftheworldapp.heartoftheworld.R;
 
@@ -78,4 +80,11 @@ public class SplashActivity extends BaseActivity {
 
         super.onBackPressed();
     }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        newBase = LocaleChanger.configureBaseContext(newBase);
+        super.attachBaseContext(newBase);
+    }
+
 }

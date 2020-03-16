@@ -80,11 +80,12 @@ public class HomeBasicFragment extends Fragment {
         gridLayoutManager=new GridLayoutManager(getContext(), 2);
         homeClasses = new ArrayList<>();
         homeClasses.clear();
-        homeClasses.add(new HomeClass(1,getString(R.string.information), R.drawable.imformation,"information"));
-        homeClasses.add(new HomeClass(2,getString(R.string.climate),  R.drawable.weather,"weather"));
-        homeClasses.add(new HomeClass(3,getString(R.string.numberimportant), R.drawable.call3,"call"));
-        homeClasses.add(new HomeClass(4,getString(R.string.Laws),  R.drawable.listicon1,"law"));
-        homeClasses.add(new HomeClass(5,getString(R.string.advices),  R.drawable.travel,"trvael"));
+        homeClasses.add(new HomeClass(0,getString(R.string.azkar), R.drawable.icon,"Azkar"));
+        homeClasses.add(new HomeClass(1,getString(R.string.information), R.drawable.imformation,"Information"));
+        homeClasses.add(new HomeClass(2,getString(R.string.climate),  R.drawable.weather,"Weather"));
+        homeClasses.add(new HomeClass(3,getString(R.string.numberimportant), R.drawable.call3,"Call"));
+        homeClasses.add(new HomeClass(4,getString(R.string.Laws),  R.drawable.listicon1,"Law"));
+        homeClasses.add(new HomeClass(5,getString(R.string.advices),  R.drawable.travel,"Travel"));
         homeClasses.add(new HomeClass(6,getString(R.string.AlHasa),  R.drawable.alashaa,"AlHasa"));
         homeClasses.add(new HomeClass(7,getString(R.string.AlBaha),  R.drawable.bahaaa,"AlBaha"));
         homeClasses.add(new HomeClass(8,getString(R.string.Jazan), R.drawable.jasan,"Jazan"));
@@ -93,8 +94,8 @@ public class HomeBasicFragment extends Fragment {
         homeClasses.add(new HomeClass(11,getString(R.string.AlKhober), R.drawable.alkbar,"AlKhober"));
         homeClasses.add(new HomeClass(12,getString(R.string.Dammam),  R.drawable.damaa,"Dammam"));
         homeClasses.add(new HomeClass(13,getString(R.string.Hail),  R.drawable.haalaa,"Hail"));
-        homeClasses.add(new HomeClass(14,getString(R.string.Riyadh),  R.drawable.tabuk,"Tabuk"));
-        homeClasses.add(new HomeClass(15,getString(R.string.Tabuk),  R.drawable.rayadaa,"Riyadh"));
+        homeClasses.add(new HomeClass(14,getString(R.string.Riyadh),  R.drawable.rayadaa,"Riyadh"));
+        homeClasses.add(new HomeClass(15,getString(R.string.Tabuk),  R.drawable.tabuk,"Tabuk"));
         homeClasses.add(new HomeClass(16,getString(R.string.Jeddah), R.drawable.jadaha,"Jeddah"));
         homeClasses.add(new HomeClass(17,getString(R.string.Abha), R.drawable.abha,"Abha"));
         recyclerView_cat.setLayoutManager(gridLayoutManager);

@@ -41,14 +41,14 @@ public class MyApplication extends Application {
 
         LocaleChanger.initialize(getApplicationContext(), locales);
 
-        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
 
      if (appLanguage.equals("en")) {
             appLanguage = "en";
          sharedPManger.SetData(AppConstants.LANG_choose, appLanguage);
         }
 
-        else {
+        else   if (appLanguage.equals("ar")) {
           appLanguage = "ar";
          sharedPManger.SetData(AppConstants.LANG_choose, appLanguage);
 

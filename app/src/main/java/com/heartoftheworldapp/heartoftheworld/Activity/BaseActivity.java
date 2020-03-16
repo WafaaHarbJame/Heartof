@@ -29,14 +29,17 @@ public class BaseActivity extends AppCompatActivity {
     String appLanguage;
     Context context;
     AwesomeProgressDialog awesomeProgressDialog;
+    SharedPreferences sharedPreferences;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPManger=new SharedPManger(getApplicationContext());
-        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
         sharedPManger=new SharedPManger(BaseActivity.this);
+        sharedPreferences = getSharedPreferences(AppConstants.KEY_FILE, MODE_PRIVATE);
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
+         appLanguage = sharedPreferences.getString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
         LocaleChanger.setLocale(new Locale(appLanguage));
 
 

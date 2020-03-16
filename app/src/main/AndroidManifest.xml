@@ -8,20 +8,41 @@
     <application
         android:name=".Model.MyApplication"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MilestoneDetailsActivity"  android:screenOrientation="portrait" ></activity>
-        <activity android:name=".Activity.Intent_Activity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.CommentActivityActivity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.HotlDetailsActivity"   android:screenOrientation="portrait" />
-        <activity android:name=".Activity.LocationActivity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.HotleActivity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.AboutCityActivity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.SoqaaActivity"  android:screenOrientation="portrait"  />
-        <activity android:name=".Activity.MilestoneActivity"  android:screenOrientation="portrait"  />
+        <activity android:name=".Activity.AzkarActivity"></activity>
+        <activity
+            android:name=".Activity.MilestoneDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Intent_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.CommentActivityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HotlDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HotleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AboutCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SoqaaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MilestoneActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Activity.AddingActivity"
             android:screenOrientation="portrait" />

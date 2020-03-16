@@ -6,9 +6,10 @@
     android:layout_width="match_parent"
     android:layout_margin="4dp"
     android:padding="8dp"
+    android:textDirection="rtl"
+    android:layoutDirection="rtl"
     android:id="@+id/container"
-    android:textDirection="ltr"
-    android:layoutDirection="ltr"
+
     android:background="@drawable/whoiteboarder"
     android:layout_height="wrap_content">
 

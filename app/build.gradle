@@ -95,5 +95,6 @@ dependencies {
     implementation 'com.github.blennerSilva:AwesomeDialog:2.0.6'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
 }
 apply plugin: 'com.google.gms.google-services'

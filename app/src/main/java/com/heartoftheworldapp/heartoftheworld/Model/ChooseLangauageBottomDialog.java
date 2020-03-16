@@ -71,7 +71,7 @@ public class ChooseLangauageBottomDialog extends BottomSheetDialogFragment {
 
         if (sharedPreferences != null) {
             if (sharedPreferences.getString(AppConstants.LANG_choose, null) != null) {
-                choosing_langauge = sharedPreferences.getString(AppConstants.LANG_choose, "ar");
+                choosing_langauge = sharedPreferences.getString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
                 if (choosing_langauge.equals("ar")) {
                     mSelectedar.setVisibility(View.VISIBLE);
 

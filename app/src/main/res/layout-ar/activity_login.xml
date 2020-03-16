@@ -7,6 +7,14 @@
     android:textDirection="rtl"
     tools:context=".Activity.LoginActivity">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -109,7 +117,34 @@
             android:layout_marginTop="16dp"
             android:text="@string/forgetPassword"
             />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin_medium"
+            android:gravity="center"
+            android:text="@string/choose_lang"
+            />
 
+        <RadioGroup
+            android:id="@+id/groupradio"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/englishlang"
+                android:text="@string/englishlang"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ARABIClang"
+                android:text="@string/arabiclang"
+                android:textSize="18sp"/>
+        </RadioGroup>
         <Button
             android:id="@+id/buttonSignInSign"
             android:layout_width="match_parent"
@@ -161,6 +196,7 @@
 
             android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

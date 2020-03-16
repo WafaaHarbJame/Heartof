@@ -19,6 +19,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -54,7 +55,7 @@ public class FavoriteSoqaAdapter extends RecyclerView.Adapter<FavoriteSoqaAdapte
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger = new SharedPManger(context);
-        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
 
         if (!(alsoaqs.isEmpty())) {
 

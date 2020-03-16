@@ -26,6 +26,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -63,7 +64,7 @@ public class SoqaAdapter extends RecyclerView.Adapter<SoqaAdapter.MyHolder> {
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger = new SharedPManger(context);
-        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Alasqaa");
         ISLOGIN= sharedPManger.getDataBool(AppConstants.ISLOGIN,false);
 
@@ -78,8 +79,8 @@ public class SoqaAdapter extends RecyclerView.Adapter<SoqaAdapter.MyHolder> {
                             .into(holder.mUserimage);
                 }
             } else if (appLanguage.matches("en")) {
-                holder.mTvSoaqName.setText(alsoaqs.get(position).getSoaq_ar_name());
-                holder.mTvSoaqDesc.setText(alsoaqs.get(position).getSoaq__ar_desc());
+                holder.mTvSoaqName.setText(alsoaqs.get(position).getSoaq_en_name());
+                holder.mTvSoaqDesc.setText(alsoaqs.get(position).getSoaq__en__desc());
                 if(alsoaqs.get(position).getSoaq_image()!=null){
                     Picasso.with(context).load(alsoaqs.get(position).getSoaq_image())
                             .error(R.drawable.logoo)

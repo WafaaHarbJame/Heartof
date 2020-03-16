@@ -79,7 +79,7 @@
     <string name="milestones">Milestones</string>
     <string name="information">Information</string>
     <string name="numberimportant">Important Numbers</string>
-    <string name="caroffices">Car OFFICES</string>
+    <string name="caroffices">Car OFFICES and Tourist</string>
     <string name="Chooselang">choose language</string>
     <string name="save">Save</string>
     <string name="arabiclang">Arabic</string>
@@ -186,12 +186,18 @@ km2.
 
 </string>
     <string name="Jeddahabout">It is one of the governorates of Makkah Al-Mukarramah Region and it is located in the west of the Kingdom of Saudi Arabia on the Red Sea coast. The governorate is 949 km from the capital Riyadh, 79 km from Makkah Al-Mukarramah, and 420 km away from Medina. It is the economic and tourist capital of the Kingdom of Saudi Arabia, and is considered the first destination in the Kingdom for tourists and is the second largest city in the Kingdom of Saudi Arabia after the capital Riyadh and the largest city in the Makkah region  Al-Mukarramah, and the Gateway to the Two Holy Mosques [8], has the largest sea port on the Red Sea, and is considered a center of finance and business in the Kingdom of Saudi Arabia and a major port for the export of non-oil goods and for importing local needs, and there are approximately 135 skyscrapers in construction in Jeddah.  There are also headquarters for international banks.</string>
-    <string name="Hailabout"> It is located in the north of Najd from the central regions, and is the seat of the Emirate of Hail. and it is the administrative and regional capital for the reigon. Hail is famous for the famous mountains of Jabal Salma and Jabal Aga. The city of Hail is located in the area of Jabal Aga, west of Wadi Al-Adraa, in the heart of which lies the well of Samah, famous for its abundance and freshness of its waters.</string>
-    <string name="Tabukabout">The seat of the Emirate of Tabuk is the largest city in northern Saudi Arabia, and around it are some of the most important monuments in the Arabian Peninsula. The Tabuk region is the northern gateway to the Arabian Peninsula, and a vital path for trade, pilgrims and pilgrims from outside the Arabian Peninsula.  It is one of the important agricultural regions in the Kingdom.</string>
+    <string name="Hailabout">It is located in the north of Najd from the central regions, and is the seat of the Emirate of Hail. and it is the administrative and regional capital for the reigon. Hail is famous for the famous mountains of Jabal Salma and Jabal Aga. The city of Hail is located in the area of Jabal Aga, west of Wadi Al-Adraa, in the heart of which lies the well of Samah, famous for its abundance and freshness of its waters.</string>
+    <string name="Tabukabout"> The seat of the Emirate of Tabuk is the largest city in northern Saudi Arabia, and around it are some of the most important monuments in the Arabian Peninsula. The Tabuk region is the northern gateway to the Arabian Peninsula, and a vital path for trade, pilgrims and pilgrims from outside the Arabian Peninsula.  It is one of the important agricultural regions in the Kingdom.</string>
     <string name="AlBahaabout">The city of Al-Baha is the capital of the Al-Baha region and the seat of the emirate, and it is one of the most important cities for tourism and agricultural purposes, and to which the region is attributed and the administrative and commercial weight is concentrated. There are governmental departments and major commercial centers, in addition to that it has popular markets, the most important of them: Thursday market. The population of Al-Baha is approximately 411,888. The city is surrounded by many forests, including: Raghdan Forest, Al-Shahba Forest, Dar Al-Jabal, and Zarqa, which Sharif Hussein visited and called it: Garden of the Hijaz and the lowland of Makkah. It is bounded on the north by the governorate of villages, on the west by the Al Mandak governorate, on the south by the Baljurashi Governorate, and on the east by the Al Aqeeq Governorate.</string>
-    <string name="DamaaAbout">"  Dammam is located in the eastern region, and is the largest city in the eastern region. It is located on three sides of the Arab Gulf; northern, eastern, and southern. It is distinguished as a commercial and residential center. It includes the administrative bodies of the region and government departments. "</string>
-    <string name="Jazanabout">"  Jizan is the administrative capital of the southwestern region of the Kingdom of Saudi Arabia. It has Jazan Port as well as the regional airport."</string>
-    <string name="AlHasaabout">Al-Ahsa is a Saudi governorate located in the Eastern Province, 328 km from the capital Riyadh. It covers an area of 379,000 km2, which is equivalent to 20% of the land of the Kingdom of Saudi Arabia, and covers the desert of the Empty Quarter about three quarters of the governorate, while the populated area and activities represent 18% of the total area, and is represented in the cities of Hofuf and Mubarraz, which are among the ten largest cities at the level Kingdom, in addition to four main cities and 22 villages. According to 2017 statistics, Al-Ahsa topped the governorates of the eastern region in the population of about 1,041,863 people.</string>
+    <string name="DamaaAbout" formatted="false"> Dammam is located in the eastern region, and is the largest city in the eastern region. It is located on three sides of the Arab Gulf; northern, eastern, and southern. It is distinguished as a commercial and residential center. It includes the administrative bodies of the region and government departments.
+    </string>
+    <string name="Jazanabout">Jizan is the administrative capital of the southwestern region of the Kingdom of Saudi Arabia. It has Jazan Port as well as the regional airport."</string>
+    <string name="AlHasaabout" formatted="false">Al-Ahsa is a Saudi governorate located in the Eastern Province, 328 km from the capital Riyadh.
+        It covers an area of 379,000 km2, which is equivalent to 20% of the land of the Kingdom of Saudi Arabia, and covers the desert
+        of the Empty Quarter about three quarters of the governorate, while the populated area and activities represent 18%
+        of the total area, and is represented in the cities of Hofuf and Mubarraz, which are among the ten largest cities at
+        the level Kingdom, in addition to four main cities and 22 villages. According to 2017 statistics, Al-Ahsa topped the
+        governorates of the eastern region in the population of about 1,041,863 people </string>
     <string name="details">details</string>
     <string name="resturant_location">Resturant Location</string>
     <string name="checkInternet">check Internet Connection</string>
@@ -207,6 +213,35 @@ km2.
     <string name="comment_text">Comment text</string>
     <string name="comment_textrequied">comment Text Requied</string>
     <string name="user">User</string>
+    <string name="choose_lang">Choose language</string>
+    <string name="azkar">Azkar</string>
+    <string name="travelazkar">Azkar For Traveling</string>
+    <string name="travlazkattext" formatted="false">God is Great, God is Great, God is Great, Glory be to Him, who made this Mockery for us
+        and what we have had two horns  and we are to our Lord to be turned over from us. The companion in travel, and the caliph in the family,
+        O God, I seek refuge in you from the travel sickness, the gloom of the scene,
+        and the bad turnover in the money and the family, and if he comes back he said them
+        and increased in them Iwon, repentant, worshipers, to our Lord Hamidon. The prayer of the traveler,
+        may God bless you with your religion and your faithfulness, and your work conclusions.
+        May God provide you with piety, forgive your sin, and make good for you wherever you are. The traveler’s supplication:
+        May God entrust you, whose deposits are not lost.” Magnification and praise in the conduct of travel:
+        Jaber, may God be pleased with him, said: If we ascended, we would grow old, and if we went down, we would praise us.
+        Remembrance of the traveler if he enchants:  He listened, heard the praise of God, and his goodness was upon us, our Lord,
+        our friend, and He preferred us to give us refuge in God from the fire.  Supplication if it descends a house in a travel or other
+        I seek refuge in the full words of God from the evil of what He created . He mentioned the return from the book: Three takbeers are honored in
+        every honor, then he says: There is no god but God alone who has no partner. He has the king, and he has praise, and He is above all
+        Almighty, Ipoon, repentant, worshipers, to our Lord Hamidon, the truth of God is His promise, and victory His servant,
+        he defeated the parties alone. The supplication prayer:  In the name of God, praise be to God .
+        Glory be to God, who has given us this thing, and what we have had two horns,
+        and I am to our Lord to be turned over) Praise be to God, praise be to God, praise be to God, praise be to God So forgive me,
+        he does not forgive sins except you. " Supplication if the compound becomes insoluble in the name of God
+    </string>
+    <string name="morninandevening" formatted="false">Morning And Evening Azkar</string>
+    <string name="morninandeveningtext">“We have reached the evening and at this very time unto Allah belongs all sovereignty,
+        and all praise is for Allah. None has the right to be worshipped except Allah, Alone without any partner,
+        to Him belongs all sovereignty and praise and He is over all things omnipotent. My Lord,
+        I ask You for the good of this night and the good of what follows it and I seek refuge in You from the evil of this night and the evil of what follows it. My Lord, I seek refuge in You from laziness and senility. My Lord, I seek refuge in You from torment in the Hell Fire and torment in the grave.” Likewise, one says in the morning: “We have reached the morning and at this very time unto Allah belongs all sovereignty…” [Muslim</string>
+    <string name="mogtotrvaller">Doaa Traveler resident</string>
+    <string name="mogtotrvallertext">I bid you farewell to Allah, whose deposits are not lost.</string>
 
 
 </resources>

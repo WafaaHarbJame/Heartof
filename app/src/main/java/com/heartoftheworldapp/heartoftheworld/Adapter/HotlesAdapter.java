@@ -29,6 +29,7 @@ import com.heartoftheworldapp.heartoftheworld.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -68,7 +69,7 @@ public class HotlesAdapter extends RecyclerView.Adapter<HotlesAdapter.MyHolder> 
     public void onBindViewHolder(final MyHolder holder, final int position) {
         this.holder = holder;
         sharedPManger = new SharedPManger(context);
-        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
+        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Hotles");
           ISLOGIN= sharedPManger.getDataBool(AppConstants.ISLOGIN,false);
 
@@ -86,9 +87,18 @@ public class HotlesAdapter extends RecyclerView.Adapter<HotlesAdapter.MyHolder> 
                 holder.mTvHotleName.setText(hotles.get(position).getHotle_en_name());
                 holder.mPrice.setText(hotles.get(position).getHotle_price());
                 holder.mTvHotleDesc.setText(hotles.get(position).getHotle_en__desc());
-                Picasso.with(context).load(hotles.get(position).getHotle_image())
-                        .error(R.drawable.logoo)
-                        .into(holder.mUserimage);
+                if(hotles.get(position).getHotle_image()==null||hotles.get(position).getHotle_image().matches("")){
+                    Picasso.with(context).load("https://r-cf.bstatic.com/images/hotel/max1024x768/106/10656035.jpg")
+                            .error(R.drawable.logoo)
+                            .into(holder.mUserimage);
+                }
+                else {
+                    Picasso.with(context).load(hotles.get(position).getHotle_image())
+                            .error(R.drawable.logoo)
+                            .into(holder.mUserimage);
+
+                }
+
 
             }
 
