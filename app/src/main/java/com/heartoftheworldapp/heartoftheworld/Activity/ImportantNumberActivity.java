@@ -18,6 +18,9 @@ public class ImportantNumberActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لرؤية الارقام المهمة
+        //هذة R.layout activity_important_number   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_important_number);
         mToolbar = findViewById(R.id.toolbar);
         mTitle = findViewById(R.id.title);

@@ -51,10 +51,14 @@ public class HotlDetailsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لرؤية تفاصيل الفندق
+        //هذة R.layout activity_hotl_details   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_hotl_details);
         mwebView = findViewById(R.id.Webview);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         sharedPManger = new SharedPManger(getActiviy());
         appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
         mFirebaseFavDatabase = FirebaseDatabase.getInstance().getReference("Favorites");

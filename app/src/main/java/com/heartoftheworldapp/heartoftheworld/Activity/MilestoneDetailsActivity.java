@@ -62,6 +62,8 @@ public class MilestoneDetailsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لعرض تفاصيل المعلم
+        //هذة R.layout activity_milestone_details  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
         setContentView(R.layout.activity_milestone_details);
         toolbar = findViewById(R.id.toolbar);
         mName = findViewById(R.id.name);

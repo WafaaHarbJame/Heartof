@@ -53,6 +53,8 @@ public class FavoriteResturantFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root;
         // Inflate the layout for this fragment
+        // شاشة المطاعم  المفضلة بالقائمة الجانبية للتطبيق
+
         root=inflater.inflate(R.layout.fragment_favorite_resturant, container, false);
         mRecycler = root.findViewById(R.id.recycler);
         mAllswip = root.findViewById(R.id.allswip);

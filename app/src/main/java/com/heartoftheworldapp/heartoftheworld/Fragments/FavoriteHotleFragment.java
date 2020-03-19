@@ -1,11 +1,8 @@
 package com.heartoftheworldapp.heartoftheworld.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -19,12 +16,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.heartoftheworldapp.heartoftheworld.Adapter.FavoriteHotlesAdapter;
-import com.heartoftheworldapp.heartoftheworld.Adapter.FavoriteMilestonesAdapter;
 import com.heartoftheworldapp.heartoftheworld.Adapter.HotlesAdapter;
 import com.heartoftheworldapp.heartoftheworld.Model.AppConstants;
 import com.heartoftheworldapp.heartoftheworld.Model.Hotles;
-import com.heartoftheworldapp.heartoftheworld.Model.Milestonse;
 import com.heartoftheworldapp.heartoftheworld.Model.SharedPManger;
 import com.heartoftheworldapp.heartoftheworld.R;
 
@@ -47,6 +41,8 @@ public class FavoriteHotleFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root;
         // Inflate the layout for this fragment
+        // الشاشة الفنادق المفضلة بالقائمة الجانبية للتطبيق
+
         root=inflater.inflate(R.layout.fragment_favorite_hotle, container, false);
         mRecycler = root.findViewById(R.id.recycler);
         mAllswip = root.findViewById(R.id.allswip);

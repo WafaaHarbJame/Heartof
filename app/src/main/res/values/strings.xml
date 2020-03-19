@@ -19,13 +19,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="married_party">حفلات زواج</string>
-    <string name="singl_party">حفلات توديع عزوبية</string>
-    <string name="grad_party">حفلات تخرج</string>
-    <string name="birthday_party">حفلات عيد ميلاد</string>
-    <string name="about">
-        هل لديك حفله ، مناسبه ، زواج    بأمكانك طلب أي خدمة من خلال تطبيق مناسبات حيث خصص هذا التطبيق  لفهم حاجة عملائنا وما يناسبهم ، مهما كانت طريقة ونمط حياتهم  حيث نفكر معك بأدق التفاصيل من تصميم الحفل والاستقبال والزهور والضيافة والدعوات والتصوير والإضاءة لذلك يمكن الطلب من خلال التطبيق بكل سهولة
-    </string>
     <string name="signIn">Sign in</string>
     <string name="emailHint">Email</string>
     <string name="passwordHint">password</string>
@@ -67,8 +60,6 @@
     <string name="enter__correct_email">Email not correct</string>
     <string name="exist">logout</string>
     <string name="back">Restore Password</string>
-    <string name="myRE" />
-    <string name="myREQ">طلباتي</string>
     <string name="loginasvistor">Login As Vistor</string>
     <string name="menu_setting">Setting</string>
     <string name="communicate">Communicate</string>
@@ -82,7 +73,7 @@
     <string name="caroffices">Car OFFICES and Tourist</string>
     <string name="Chooselang">choose language</string>
     <string name="save">Save</string>
-    <string name="arabiclang">Arabic</string>
+    <string name="arabiclang">العربية</string>
     <string name="englishlang">English</string>
     <string name="myAccount">My Account</string>
     <string name="language">language</string>

@@ -20,9 +20,6 @@
             android:name=".Activity.MilestoneDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Intent_Activity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Activity.CommentActivityActivity"
             android:screenOrientation="portrait" />
         <activity

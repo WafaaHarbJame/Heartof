@@ -53,6 +53,9 @@ public class LocationActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لرؤية الموقع على الخريطة
+        //هذة R.layout activity_location   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_location);
         mwebView = findViewById(R.id.Webview);
         toolbar = findViewById(R.id.toolbar);

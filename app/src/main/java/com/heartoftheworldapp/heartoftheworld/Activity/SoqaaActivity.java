@@ -42,6 +42,9 @@ public class SoqaaActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لعرض الاسواق
+        //هذة R.layout activity_soqaa  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_soqaa);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

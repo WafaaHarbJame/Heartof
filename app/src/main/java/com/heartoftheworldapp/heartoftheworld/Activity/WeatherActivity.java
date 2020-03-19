@@ -19,6 +19,8 @@ public class WeatherActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لعرض المناخ الخاص بالمملكة
+        //هذة R.layout activity_weather  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
         setContentView(R.layout.activity_weather);
         mToolbar = findViewById(R.id.toolbar);
         mTitle = findViewById(R.id.title);

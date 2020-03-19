@@ -129,6 +129,8 @@
             android:id="@+id/groupradio"
             android:layout_marginStart="10dp"
             android:layout_width="match_parent"
+            android:textDirection="rtl"
+
             android:layout_height="wrap_content">
 
             <RadioButton

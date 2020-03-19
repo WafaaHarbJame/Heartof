@@ -1,4 +1,4 @@
-package com.heartoftheworldapp.heartoftheworld.ui.home;
+package com.heartoftheworldapp.heartoftheworld.Fragments;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

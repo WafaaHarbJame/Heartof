@@ -73,6 +73,10 @@ public class CommentActivityActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // شاشة لرؤية التعليقات وانشاء تعليق
+        //هذة R.layout activity_comment_activity   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_comment_activity);
         toolbar = findViewById(R.id.toolbar);
         mName = findViewById(R.id.name);

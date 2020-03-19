@@ -20,6 +20,9 @@ public class AddingActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لاضافة بيانات للتطبيق
+        //هذة R.layout activity_adding  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_adding);
         mAdding = findViewById(R.id.adding);
         mAddResturant = findViewById(R.id.AddResturant);

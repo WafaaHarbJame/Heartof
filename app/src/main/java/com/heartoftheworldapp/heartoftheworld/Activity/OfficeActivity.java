@@ -42,6 +42,9 @@ public class OfficeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لعرض المكاتب
+        //هذة R.layout activity_office  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_office);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

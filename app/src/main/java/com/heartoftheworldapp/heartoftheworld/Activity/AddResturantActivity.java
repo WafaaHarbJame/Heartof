@@ -48,6 +48,9 @@ public class AddResturantActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة اضافة مطعم
+        //هذة R.layout.activity_add_resturant   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_add_resturant);
         mResturantsArName = findViewById(R.id.Resturants_ar_name);
         mResturantsEnName = findViewById(R.id.Resturants_en_name);
@@ -68,6 +71,7 @@ public class AddResturantActivity extends BaseActivity {
         counter = (int) new Date().getTime();
 
         sharedPManger=new SharedPManger(getApplicationContext());
+        //اانشاء جدول  Resturants لتخزين بيانات المطاعم
 
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Resturants");
         final String id = mFirebaseDatabase.push().getKey();

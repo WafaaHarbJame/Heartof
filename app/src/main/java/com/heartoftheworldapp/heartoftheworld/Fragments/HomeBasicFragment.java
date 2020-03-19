@@ -16,12 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.heartoftheworldapp.heartoftheworld.Adapter.CatogoryAdapter;
 import com.heartoftheworldapp.heartoftheworld.Adapter.HomeAdapter;
-import com.heartoftheworldapp.heartoftheworld.Model.Catogory;
 import com.heartoftheworldapp.heartoftheworld.Model.HomeClass;
 import com.heartoftheworldapp.heartoftheworld.R;
-import com.heartoftheworldapp.heartoftheworld.ui.home.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +47,7 @@ public class HomeBasicFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        //الشاشة الرئيسية للتطبيق
         View view = inflater.inflate(R.layout.fragment_home_basic, container, false);
         homeViewModel.getText().observe(getActivity(), new Observer<String>() {
             @Override

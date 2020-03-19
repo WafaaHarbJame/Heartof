@@ -19,6 +19,9 @@ public class AdciceActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //شاشة نصائح السفر
+        //هذة R.layout activity_adcice  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_adcice);
         mToolbar = findViewById(R.id.toolbar);
         mTitle = findViewById(R.id.title);

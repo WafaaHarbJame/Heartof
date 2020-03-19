@@ -46,6 +46,9 @@ public class AddSoqaaActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة اضافة سوق
+        //هذة R.layout.activity_add_soqaa   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_add_soqaa);
         mCityname = findViewById(R.id.cityname);
         mSoaqArName = findViewById(R.id.soaq_ar_name);
@@ -55,6 +58,7 @@ public class AddSoqaaActivity extends BaseActivity {
         mSoaqImage = findViewById(R.id.soaq_image);
         mButton = findViewById(R.id.button);
         sharedPManger=new SharedPManger(getApplicationContext());
+        //انشاء جدول الاسواق في الفابيرس
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Alasqaa");
         final String id = mFirebaseDatabase.push().getKey();
         sharedPManger=new SharedPManger(getApplicationContext());

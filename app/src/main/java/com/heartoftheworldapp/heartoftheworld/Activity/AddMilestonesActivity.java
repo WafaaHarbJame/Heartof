@@ -43,12 +43,16 @@ public class AddMilestonesActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة اضافة معلم
+        //هذة R.layout.activity_add_milestones  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
         setContentView(R.layout.activity_add_milestones);
         mCityname = findViewById(R.id.cityname);
         mMilestonseArDesc = findViewById(R.id.Milestonse__ar_desc);
         mMilestonseEnDesc = findViewById(R.id.Milestonse__en__desc);
         mMilestonseImage = findViewById(R.id.Milestonse_image);
         mButton = findViewById(R.id.button);
+        // تعريف جدول Milestones في الفابيرس لتخزين المعالم الخاص بكل مدينة
+
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Milestones");
         final String id = mFirebaseDatabase.push().getKey();
         counter = (int) new Date().getTime();
@@ -84,6 +88,7 @@ public class AddMilestonesActivity extends BaseActivity {
                 if (sharedPManger.getDataInt(AppConstants.counter,0)>0) {
                     counter = sharedPManger.getDataInt(AppConstants.counter,0);
                 }
+//بدء عملية حفظ البيانات وفحصها اذا كانت موجودة بالفابيرس اولا
 
                 final Milestonse milestonse = new Milestonse(counter,
                         mMilestonseArDesc.getText().toString(), mMilestonseEnDesc.getText().toString(),
@@ -94,12 +99,10 @@ public class AddMilestonesActivity extends BaseActivity {
                         if(dataSnapshot.exists()){
                             counter=counter+1;
                             mFirebaseDatabase.child(city_name).child(counter + "").setValue(milestonse);
-
                             mMilestonseArDesc.setText("");
                             mMilestonseEnDesc.setText("");
                             mMilestonseImage.setText("");
                             mMilestonseImage.setText("");
-
                             Toast(getString(R.string.addingsucess));
                         }
                         else {

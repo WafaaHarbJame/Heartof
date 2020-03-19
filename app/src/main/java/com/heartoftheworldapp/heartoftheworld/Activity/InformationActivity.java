@@ -20,6 +20,9 @@ public class InformationActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لرؤية معلومات عن المملكة
+        //هذة R.layout activity_information   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_information);
         mToolbar = findViewById(R.id.toolbar);
         mTitle = findViewById(R.id.title);

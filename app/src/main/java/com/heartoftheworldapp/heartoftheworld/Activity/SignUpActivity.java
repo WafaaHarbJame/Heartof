@@ -47,6 +47,8 @@ public class SignUpActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        // شاشة التسجيل الخاص بالمستخدم
+//        //هذة R.layout.activity_sign_up  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
 
         mEtSignUpFullName = findViewById(R.id.etSignUpFullName);
         mEtSignUpEmail = findViewById(R.id.etSignUpEmail);
@@ -56,6 +58,7 @@ public class SignUpActivity extends BaseActivity {
         mEtSignUpPhone = findViewById(R.id.etSignUpPhone);
         mButtonSignUpSign = findViewById(R.id.buttonSignUpSign);
         mButtonSignUpClickHere = findViewById(R.id.buttonSignUpClickHere);
+        // جدول Users لتخزين بيانات المستخدم
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Users");
         mBack = findViewById(R.id.back);
         sharedPreferences = getSharedPreferences(AppConstants.KEY_FILE, MODE_PRIVATE);
@@ -100,7 +103,7 @@ public class SignUpActivity extends BaseActivity {
         mButtonSignUpSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+// فحص البيانات اذا فارغة او لا
                 if (mEtSignUpFullName.getText().toString().equals(null) || mEtSignUpFullName.getText().toString().equals("")) {
                     mEtSignUpFullName.setError(getString(R.string.fullNameRequired));
                     mEtSignUpFullName.requestFocus();
@@ -144,9 +147,13 @@ public class SignUpActivity extends BaseActivity {
                     final String email = mEtSignUpEmail.getText().toString();
                     final String phone = CountryCode + mEtSignUpPhone.getText().toString();
 
-                    final Users users = new Users(mEtSignUpFullName.getText().toString(), mEtSignUpEmail.getText().toString(), mEtSignUpPassword.getText().toString(), CountryCode + mEtSignUpPhone.getText().toString());
-                    mFirebaseDatabase.child(phone).addListenerForSingleValueEvent(new ValueEventListener() {
 
+                    final Users users = new Users(mEtSignUpFullName.getText().toString(),
+                            mEtSignUpEmail.getText().toString(), mEtSignUpPassword.getText().toString(),
+                            CountryCode + mEtSignUpPhone.getText().toString());
+                    // البدء بفحص عملية التسجيل وتخزين البيانات في الفابيرس
+
+                    mFirebaseDatabase.child(phone).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (dataSnapshot.exists()) {
@@ -156,7 +163,6 @@ public class SignUpActivity extends BaseActivity {
                                 mEtSignUpPassword.setText("");
                                 mEtSignUpPhone.setText("");
                                 mEtSignUpConfirmPassword.setText("");
-
 
                             } else {
                                 mFirebaseDatabase.child(phone).setValue(users);

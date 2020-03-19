@@ -26,6 +26,7 @@ public class SettingFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        // شاشة الاعدادات لتغير اللغة
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
           mToolbarLogo = view.findViewById(R.id.toolbarLogo);
         mTvLangauge = view.findViewById(R.id.tvLangauge);

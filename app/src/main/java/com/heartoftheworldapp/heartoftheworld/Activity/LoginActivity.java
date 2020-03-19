@@ -60,6 +60,9 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة الدخول
+        //هذة R.layout activity_login   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_login);
         mCcp = findViewById(R.id.ccp);
         mEtSignUpPhone = findViewById(R.id.etSignUpPhone);
@@ -81,6 +84,7 @@ public class LoginActivity extends BaseActivity {
 
         sharedPManger=new SharedPManger(LoginActivity.this);
         appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
+        // فحص اللغة المخزنة
 
         if (appLanguage.matches("en")) {
             config.locale = Locale.ENGLISH;
@@ -176,6 +180,7 @@ public class LoginActivity extends BaseActivity {
                 startActivity(intent);
             }
         }
+        // فحص بيانات اليوزر المدخلة مع البيانات المخزنة في الفابيرس
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Users").child(mEtSignUpPhone.getText().toString());
 
         mButtonSignInSign.setOnClickListener(new View.OnClickListener() {
@@ -248,6 +253,7 @@ public class LoginActivity extends BaseActivity {
 
             }
         });
+        // اذا كان ليس لديه حساب سوف يذهب الى شاشة التسجيل
         mButtonSignInSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -256,6 +262,8 @@ public class LoginActivity extends BaseActivity {
                 finish();
             }
         });
+        // اذا كان  لديه حساب ونسي كلمة المرو سوف يذهب الى شاشة تغير كلمة المرور
+
         mForgetpassward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

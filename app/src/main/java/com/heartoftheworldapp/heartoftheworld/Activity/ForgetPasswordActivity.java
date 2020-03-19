@@ -36,6 +36,9 @@ public class ForgetPasswordActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لاسترجاع كلمة المرور
+        //هذة R.layout activity_forget_password   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_forget_password);
 
         mEtPhoneNumber = findViewById(R.id.etPhoneNumber);

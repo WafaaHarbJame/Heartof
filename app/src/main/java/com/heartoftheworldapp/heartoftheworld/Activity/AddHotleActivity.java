@@ -48,6 +48,9 @@ public class AddHotleActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لاضافة فندق
+        //هذة R.layout activity_add_hotle  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_add_hotle);
         mCityname = findViewById(R.id.cityname);
         mHotleArName = findViewById(R.id.Hotle_ar_name);
@@ -59,6 +62,7 @@ public class AddHotleActivity extends BaseActivity {
         mHotleImage = findViewById(R.id.Hotle_image);
         mButton = findViewById(R.id.button);
         sharedPManger=new SharedPManger(getActiviy());
+        //اانشاء جدول  Hotles لتخزين بيانات الفنادق
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Hotles");
         final String id = mFirebaseDatabase.push().getKey();
         toolbar = findViewById(R.id.toolbar);
@@ -82,10 +86,11 @@ public class AddHotleActivity extends BaseActivity {
         });
 
 
-
+// اضافة الفندق المدخل في فاعدة البيانات في جدولHotles
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 counter = (int) new Date().getTime();
 
                 counter = counter + 1;

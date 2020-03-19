@@ -35,6 +35,9 @@ public class CatogoryActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة الاصناف التابعة لكل مدينة مثل المطاعم والفنادق والاسواق والمكاتب ....الخ
+        //هذة R.layout activity_catogory   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
+
         setContentView(R.layout.activity_catogory);
 
         toolbar = findViewById(R.id.toolbar);
@@ -63,6 +66,8 @@ public class CatogoryActivity extends BaseActivity {
                 actionBar.setTitle(name);
 
             }
+
+            // اضافة اصناف
 
             catogories.add(new Catogory(1,getString(R.string.Restaurants), "https://www.ahstatic.com/photos/5394_rsr001_00_p_1024x768.jpg",name));
             catogories.add(new Catogory(2,getString(R.string.hotels), "https://ihg.scene7.com/is/image/ihg/even-hotels-eugene-5405616297-4x3",name));

@@ -43,6 +43,8 @@ public class HotleActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لرؤية الفنادق
+        //هذة R.layout activity_hotle   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
         setContentView(R.layout.activity_hotle);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

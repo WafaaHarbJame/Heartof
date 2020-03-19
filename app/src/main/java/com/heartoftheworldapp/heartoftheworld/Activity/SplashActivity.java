@@ -28,6 +28,9 @@ public class SplashActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
+// شاشة البداية عند فتح التطبيق بحيث يتم فحص المستخدم اذا كان قام بتسجيل الدخول فسوف يذهب الى الصفحة الرئيسية
+        // أما اذا كان لا فسوف يذهب لشاشة الدخول ومن ثم يمكنها تسجيل الدخول أو الدخول كزائر
+        //ويمكن الدخول الى التطبيق كزائر بدون تسجيل دخول
 
         SharedPreferences sharedPreferences = getSharedPreferences(AppConstants.KEY_FILE, MODE_PRIVATE);
         if (sharedPreferences.getString(AppConstants.KEY_PHONE, null) != null &&

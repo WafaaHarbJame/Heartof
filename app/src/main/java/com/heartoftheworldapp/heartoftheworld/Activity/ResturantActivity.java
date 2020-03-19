@@ -40,6 +40,9 @@ public class ResturantActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لعرض المطاعم
+        //هذة R.layout activity_resturant  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_resturant);
 
         toolbar = findViewById(R.id.toolbar);

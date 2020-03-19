@@ -41,6 +41,10 @@ public class MilestoneActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // شاشة لعرض المعالم
+        //هذة R.layout activity_milestone  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_milestone);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

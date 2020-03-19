@@ -4,12 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
@@ -19,21 +14,15 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriMilestoneFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteHotleFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteResturantFragment;
-import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteSoqaFragment;
-import com.heartoftheworldapp.heartoftheworld.Fragments.FavoriteofficeFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.HomeBasicFragment;
 import com.heartoftheworldapp.heartoftheworld.Fragments.SettingFragment;
 import com.heartoftheworldapp.heartoftheworld.Model.AppConstants;
-import com.heartoftheworldapp.heartoftheworld.Model.ChooseLangauageBottomDialog;
 import com.heartoftheworldapp.heartoftheworld.R;
-import com.heartoftheworldapp.heartoftheworld.ui.share.ShareFragment;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
@@ -49,6 +38,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // شاشة الرئيسية للتتطبيق
+        //هذة R.layout activity_weather  الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b لرؤية التصميم
+
         setContentView(R.layout.activity_main);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

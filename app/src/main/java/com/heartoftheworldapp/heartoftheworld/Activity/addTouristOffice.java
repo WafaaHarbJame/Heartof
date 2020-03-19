@@ -43,6 +43,8 @@ public class addTouristOffice extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // شاشة لاضافة مكاتب تأجير سيارات وسياحية
+        //هذة R.layout activity_add_tourist_office   الخاصة بتصميم الشاشة يمكنك الذهاب اليها بالضغط على ctrl+b عند اسم layout  لرؤية التصميم
         setContentView(R.layout.activity_add_tourist_office);
         mOfficearname = findViewById(R.id.officearname);
         mOfficeenname = findViewById(R.id.officeenname);
@@ -60,6 +62,7 @@ public class addTouristOffice extends BaseActivity {
         actionBar.setTitle(getString(R.string.addoffice));
         counter = (int) new Date().getTime();
 
+        // انشاء جدول في الفابيرس لتخزين فيها بيانات المكاتب
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Offices");
         mCityname.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
@@ -88,6 +91,7 @@ public class addTouristOffice extends BaseActivity {
                         mOfficetypeen.getText().toString(),
                         mOfficearname.getText().toString(), mOfficeenname.getText().toString(),
                         mOfficenumber.getText().toString(),false,city_name);
+                // حفظ بيانات في جدول  المكاتب
 
                 mFirebaseDatabase.child(city_name).child(counter + "").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
