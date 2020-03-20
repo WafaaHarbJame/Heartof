@@ -78,6 +78,8 @@ public class HomeBasicFragment extends Fragment {
         gridLayoutManager=new GridLayoutManager(getContext(), 2);
         homeClasses = new ArrayList<>();
         homeClasses.clear();
+// اضافة عنصر جديد في الصفحة الرئيسية للتطبيق سواء اضافة مدينة جديدة أو شيء جديد وكل شيء يتم اضافتها  له id
+
         homeClasses.add(new HomeClass(0,getString(R.string.azkar), R.drawable.icon,"Azkar"));
         homeClasses.add(new HomeClass(1,getString(R.string.information), R.drawable.imformation,"Information"));
         homeClasses.add(new HomeClass(2,getString(R.string.climate),  R.drawable.weather,"Weather"));
