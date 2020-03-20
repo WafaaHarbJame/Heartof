@@ -25,6 +25,10 @@ import com.heartoftheworldapp.heartoftheworld.R;
 
 public class SignUpActivity extends BaseActivity {
 
+    boolean select_country = false;
+    String CountryCode = "+966";
+    SharedPreferences sharedPreferences;
+    SharedPManger sharedPManger;
     private EditText mEtSignUpFullName;
     private EditText mEtSignUpEmail;
     private EditText mEtSignUpPassword;
@@ -34,14 +38,8 @@ public class SignUpActivity extends BaseActivity {
     private Button mButtonSignUpSign;
     private Button mButtonSignUpClickHere;
     private DatabaseReference mFirebaseDatabase;
-    boolean select_country = false;
-    String CountryCode = "+966";
     private CountryCodePicker ccp;
     private ImageView mBack;
-    SharedPreferences sharedPreferences;
-    SharedPManger sharedPManger;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +60,7 @@ public class SignUpActivity extends BaseActivity {
         mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Users");
         mBack = findViewById(R.id.back);
         sharedPreferences = getSharedPreferences(AppConstants.KEY_FILE, MODE_PRIVATE);
-            sharedPManger=new SharedPManger(getActiviy());
+        sharedPManger = new SharedPManger(getActiviy());
 
         mCcp.setOnTouchListener(new View.OnTouchListener() {
 
@@ -140,24 +138,21 @@ public class SignUpActivity extends BaseActivity {
                     mEtSignUpPhone.requestFocus();
 
                 } else {
-                    showProgreesDilaog(getActiviy(),getString(R.string.login),getString(R.string.logintxt));
+                    showProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
                     final String name = mEtSignUpFullName.getText().toString();
                     final String id = mFirebaseDatabase.push().getKey();
                     final String email = mEtSignUpEmail.getText().toString();
                     final String phone = CountryCode + mEtSignUpPhone.getText().toString();
 
-
-                    final Users users = new Users(mEtSignUpFullName.getText().toString(),
-                            mEtSignUpEmail.getText().toString(), mEtSignUpPassword.getText().toString(),
-                            CountryCode + mEtSignUpPhone.getText().toString());
+                    final Users users = new Users(mEtSignUpFullName.getText().toString(), mEtSignUpEmail.getText().toString(), mEtSignUpPassword.getText().toString(), CountryCode + mEtSignUpPhone.getText().toString());
                     // البدء بفحص عملية التسجيل وتخزين البيانات في الفابيرس
 
                     mFirebaseDatabase.child(phone).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (dataSnapshot.exists()) {
-                                Toast.makeText(SignUpActivity.this, "هذا الرقم مسجل مسبقا", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, ""+getString(R.string.phone_numberexist), Toast.LENGTH_SHORT).show();
                                 mEtSignUpEmail.setText("");
                                 mEtSignUpFullName.setText("");
                                 mEtSignUpPassword.setText("");
@@ -166,12 +161,12 @@ public class SignUpActivity extends BaseActivity {
 
                             } else {
                                 mFirebaseDatabase.child(phone).setValue(users);
-                                Toast.makeText(SignUpActivity.this, "تم التسجيل بنجاج  ", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, getString(R.string.registersucess), Toast.LENGTH_SHORT).show();
                                 sharedPManger.SetData(AppConstants.KEY_EMAIL, mEtSignUpEmail.getText().toString());
                                 sharedPManger.SetData(AppConstants.KEY_passward, mEtSignUpPassword.getText().toString());
                                 sharedPManger.SetData(AppConstants.KEY_PHONE, CountryCode + mEtSignUpPhone.getText().toString());
                                 sharedPManger.SetData(AppConstants.KEY_username, mEtSignUpFullName.getText().toString());
-                                sharedPManger.SetData(AppConstants.ISLOGIN,true);
+                                sharedPManger.SetData(AppConstants.ISLOGIN, true);
                                 Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                                 intent.putExtra(AppConstants.KEY_EMAIL, mEtSignUpEmail.getText().toString());
                                 intent.putExtra(AppConstants.KEY_passward, mEtSignUpPassword.getText().toString());
@@ -181,7 +176,7 @@ public class SignUpActivity extends BaseActivity {
                                 startActivity(intent);
 
                             }
-                            hideProgreesDilaog(getActiviy(),getString(R.string.signUp),getString(R.string.signUptext));
+                            hideProgreesDilaog(getActiviy(), getString(R.string.signUp), getString(R.string.signUptext));
 
                         }
 

@@ -41,6 +41,9 @@ public class LoginActivity extends BaseActivity {
     boolean select_country = false;
     String CountryCode = "+966";
     SharedPreferences sharedPreferences;
+    SharedPManger sharedPManger;
+    String choosing_langauge;
+    SharedPreferences.Editor editor_signUp;
     private CountryCodePicker mCcp;
     private EditText mEtSignUpPhone;
     private EditText mEtSignInPassword;
@@ -49,13 +52,10 @@ public class LoginActivity extends BaseActivity {
     private Button mButtonSignInSignUp;
     private DatabaseReference mFirebaseDatabase;
     private TextView mLoginvistor;
-    SharedPManger sharedPManger;
     private Button mAddingDataForAplication;
     private RadioButton mEnglishlang;
     private RadioButton mARABIClang;
     private RadioGroup mGroupradio;
-    String choosing_langauge;
-    SharedPreferences.Editor editor_signUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,8 +82,8 @@ public class LoginActivity extends BaseActivity {
 
         Configuration config = new Configuration();
 
-        sharedPManger=new SharedPManger(LoginActivity.this);
-        appLanguage=  sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
+        sharedPManger = new SharedPManger(LoginActivity.this);
+        appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, Locale.getDefault().getLanguage());
         // فحص اللغة المخزنة
 
         if (appLanguage.matches("en")) {
@@ -111,8 +111,8 @@ public class LoginActivity extends BaseActivity {
         mGroupradio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                RadioButton radioButton =mGroupradio.findViewById(checkedId);
-                if(radioButton.getText().equals(getString(R.string.englishlang))){
+                RadioButton radioButton = mGroupradio.findViewById(checkedId);
+                if (radioButton.getText().equals(getString(R.string.englishlang))) {
                     editor_signUp = sharedPreferences.edit();
                     editor_signUp.putString(AppConstants.LANG_choose, "en");
                     sharedPManger.SetData(AppConstants.LANG_choose, "en");
@@ -120,8 +120,7 @@ public class LoginActivity extends BaseActivity {
                     editor_signUp.commit();
                     LocaleChanger.setLocale(new Locale("en"));
 
-                }
-                else {
+                } else {
                     editor_signUp = sharedPreferences.edit();
                     editor_signUp.putString(AppConstants.LANG_choose, "ar");
                     sharedPManger.SetData(AppConstants.LANG_choose, "ar");
@@ -181,8 +180,8 @@ public class LoginActivity extends BaseActivity {
             }
         }
         // فحص بيانات اليوزر المدخلة مع البيانات المخزنة في الفابيرس
-        mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Users").child(mEtSignUpPhone.getText().toString());
 
+        mFirebaseDatabase = FirebaseDatabase.getInstance().getReference("Users").child(mEtSignUpPhone.getText().toString());
         mButtonSignInSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -198,6 +197,8 @@ public class LoginActivity extends BaseActivity {
 
                     final String phone = mEtSignUpPhone.getText().toString();
                     final String password = mEtSignInPassword.getText().toString();
+
+                    // فحص بيانات الدخول باستخدام الفابيرس
                     mFirebaseDatabase.child(CountryCode + mEtSignUpPhone.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -222,7 +223,7 @@ public class LoginActivity extends BaseActivity {
 
 
                                     } else {
-                                        Toast.makeText(LoginActivity.this, "كلمة المرور خطأ ", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, getString(R.string.passwardwrong), Toast.LENGTH_SHORT).show();
                                         mEtSignInPassword.setText("");
                                         hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
@@ -238,7 +239,7 @@ public class LoginActivity extends BaseActivity {
                                 hideProgreesDilaog(getActiviy(), getString(R.string.login), getString(R.string.logintxt));
 
                                 // mFirebaseDatabase.child(name).setValue(users);
-                                Toast.makeText(LoginActivity.this, "هذا الحساب غير موجود", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "" + getString(R.string.accountnotexist), Toast.LENGTH_SHORT).show();
                                 mEtSignUpPhone.setText("");
                                 mEtSignInPassword.setText("");
                             }
@@ -253,6 +254,7 @@ public class LoginActivity extends BaseActivity {
 
             }
         });
+
         // اذا كان ليس لديه حساب سوف يذهب الى شاشة التسجيل
         mButtonSignInSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -276,7 +278,6 @@ public class LoginActivity extends BaseActivity {
         mEtSignUpPhone.requestFocus();
 
 
-
     }
 
     @Override
@@ -284,6 +285,7 @@ public class LoginActivity extends BaseActivity {
         newBase = LocaleChanger.configureBaseContext(newBase);
         super.attachBaseContext(newBase);
     }
+
     public void setLocale(String lang) {
         Locale myLocale = new Locale(lang);
         Resources res = getResources();
@@ -291,9 +293,7 @@ public class LoginActivity extends BaseActivity {
         Configuration conf = res.getConfiguration();
         conf.locale = myLocale;
         res.updateConfiguration(conf, dm);
-        //Intent refresh = new Intent(this, AndroidLocalize.class);
-        //finish();
-        //startActivity(refresh);
+
     }
 
 }

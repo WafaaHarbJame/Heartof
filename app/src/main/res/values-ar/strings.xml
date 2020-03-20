@@ -260,5 +260,8 @@
     </string>
     <string name="mogtotrvaller">دعاء المسافر للمقيم</string>
     <string name="mogtotrvallertext">أستودعك الله الذي لا تضيع ودائعه.</string>
-
+    <string name="passwardwrong">كلمة المرور غير صحيحة</string>
+    <string name="accountnotexist">هذا الحساب غير موجود</string>
+    <string name="phone_numberexist">رقم الهاتف مسجل مسبقاً</string>
+    <string name="registersucess">"تم التسجيل بنجاج "</string>
 </resources>

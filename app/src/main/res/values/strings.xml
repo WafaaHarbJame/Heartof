@@ -93,7 +93,8 @@
     <string name="Tabuk">Tabuk</string>
     <string name="advices">Travel advice </string>
     <string name="city">city</string>
-
+    
+<!-- اضافة مدينة جديدة لقائمة اختر المدينة من هنا -->
     <string-array name="city">
         <item>AlHasa</item>
         <item>AlBaha</item>
@@ -192,14 +193,14 @@ km2.
     <string name="details">details</string>
     <string name="resturant_location">Resturant Location</string>
     <string name="checkInternet">check Internet Connection</string>
-    <string name="favorite">Favorite Resturants</string>
+    <string name="favorite">Favorite Restaurants</string>
     <string name="favorite_office">Favorite Office</string>
     <string name="favorite_hotels">Favorite Hotels</string>
     <string name="favorite_soqa">Favorite Soqa</string>
-    <string name="favorite_milstone">favorite  Milstone</string>
+    <string name="favorite_milstone">favorite  Milstones</string>
     <string name="mustlogin">"You must login To add to favorite or comment "</string>
     <string name="addfavorite">add favorite</string>
-    <string name="addcomment">addcomment</string>
+    <string name="addcomment">add comment</string>
     <string name="comment">comments</string>
     <string name="comment_text">Comment text</string>
     <string name="comment_textrequied">comment Text Requied</string>
@@ -233,6 +234,10 @@ km2.
         I ask You for the good of this night and the good of what follows it and I seek refuge in You from the evil of this night and the evil of what follows it. My Lord, I seek refuge in You from laziness and senility. My Lord, I seek refuge in You from torment in the Hell Fire and torment in the grave.” Likewise, one says in the morning: “We have reached the morning and at this very time unto Allah belongs all sovereignty…” [Muslim</string>
     <string name="mogtotrvaller">Doaa Traveler resident</string>
     <string name="mogtotrvallertext">I bid you farewell to Allah, whose deposits are not lost.</string>
+    <string name="passwardwrong">Passward not correct </string>
+    <string name="accountnotexist">The account not exist</string>
+    <string name="phone_numberexist">Phone number registeredً before </string>
+    <string name="registersucess">Registered Success</string>
 
 
 </resources>
