@@ -47,7 +47,9 @@ public class HomeBasicFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+
         //الشاشة الرئيسية للتطبيق
+
         View view = inflater.inflate(R.layout.fragment_home_basic, container, false);
         homeViewModel.getText().observe(getActivity(), new Observer<String>() {
             @Override

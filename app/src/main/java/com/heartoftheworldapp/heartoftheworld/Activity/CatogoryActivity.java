@@ -25,13 +25,14 @@ public class CatogoryActivity extends BaseActivity {
     List<Catogory> catogories;
     CatogoryAdapter catogoryAdapter;
     LinearLayoutManager layoutManager;
-    private RecyclerView recyclerView_cat;
     GridLayoutManager gridLayoutManager;
     Toolbar toolbar;
-    String name="";
+    String name = "";
     String city_arname;
     SharedPManger sharedPManger;
     String appLanguage;
+    private RecyclerView recyclerView_cat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,40 +49,43 @@ public class CatogoryActivity extends BaseActivity {
 
 
         recyclerView_cat = findViewById(R.id.recycler);
-        gridLayoutManager=new GridLayoutManager(getActiviy(), 2);
+        gridLayoutManager = new GridLayoutManager(getActiviy(), 2);
         catogories = new ArrayList<>();
-        Intent intent=getIntent();
+        Intent intent = getIntent();
         sharedPManger = new SharedPManger(getActiviy());
         appLanguage = sharedPManger.getDataString(AppConstants.LANG_choose, "ar");
 
-        if(intent!=null) {
+        if (intent != null) {
             int id = intent.getIntExtra("id", 1);
-             name=intent.getStringExtra("cityname");
-            city_arname=intent.getStringExtra("cityarname");
+            name = intent.getStringExtra("cityname");
+            city_arname = intent.getStringExtra("cityarname");
             if (appLanguage.matches("ar")) {
                 actionBar.setTitle(city_arname);
 
-            }
-            else {
+            } else {
                 actionBar.setTitle(name);
 
             }
 
             // اضافة اصناف
+            //لاضافة اصناف جديدة تابعة لكل مدينة قم باضافتها هنا  حيث لكل تصنيف id مختلف
+            // صورة الصنف رابط
+           // الاسم يتم اضافته في ملف string
+            // النصوص العربية في ملف string(ar
+            //النصوص الانجليزي في ملف string
 
-            catogories.add(new Catogory(1,getString(R.string.Restaurants), "https://www.ahstatic.com/photos/5394_rsr001_00_p_1024x768.jpg",name));
-            catogories.add(new Catogory(2,getString(R.string.hotels), "https://ihg.scene7.com/is/image/ihg/even-hotels-eugene-5405616297-4x3",name));
-            catogories.add(new Catogory(3,getString(R.string.milestones), "https://albenaa-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/13.jpg",name));
-            catogories.add(new Catogory(4,getString(R.string.caroffices), "https://ibb.co/4W0QYvW",name));
-            catogories.add(new Catogory(5,getString(R.string.aboutcity), "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/combatting_bank_loan.jpg?itok=bAH7OB_o",name));
-            catogories.add(new Catogory(6,getString(R.string.ALASQA), "https://cdn.openpr.com/R/9/R91489600_g.jpg",name));
+            catogories.add(new Catogory(1, getString(R.string.Restaurants), "https://www.ahstatic.com/photos/5394_rsr001_00_p_1024x768.jpg", name));
+            catogories.add(new Catogory(2, getString(R.string.hotels), "https://ihg.scene7.com/is/image/ihg/even-hotels-eugene-5405616297-4x3", name));
+            catogories.add(new Catogory(3, getString(R.string.milestones), "https://albenaa-wpengine.netdna-ssl.com/wp-content/uploads/2014/04/13.jpg", name));
+            catogories.add(new Catogory(4, getString(R.string.caroffices), "https://ibb.co/4W0QYvW", name));
+            catogories.add(new Catogory(5, getString(R.string.aboutcity), "https://assetsds.cdnedge.bluemix.net/sites/default/files/styles/big_2/public/feature/images/combatting_bank_loan.jpg?itok=bAH7OB_o", name));
+            catogories.add(new Catogory(6, getString(R.string.ALASQA), "https://cdn.openpr.com/R/9/R91489600_g.jpg", name));
             recyclerView_cat.setLayoutManager(gridLayoutManager);
             catogoryAdapter = new CatogoryAdapter(getActiviy(), catogories);
             recyclerView_cat.setAdapter(catogoryAdapter);
 
 
         }
-
 
 
     }
